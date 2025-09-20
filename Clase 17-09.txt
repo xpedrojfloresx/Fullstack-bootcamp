@@ -1,0 +1,13 @@
+Necesitamos abrir un directorio ya que esta es la aplicacion.
+
+- Aplicacion: Serie de archivos de diferentes extensiones que estan dentro de una carpeta.
+- Terminal: Canal de comunicacion directo con el sistema operativo. (a traves de comandos)
+
+HTML lenguaje marcado por hipertexto ---- es una pagina web
+Navegador es un software que me pertime conectarme a la web
+
+f12 para las dev tools ------- el famoso click der inspeccionar.
+
+html css y javascript unicos lenguajes que conoce el Navegador.
+
+json objeto con notacion de javascript. Sirve para almacenar e intercambiar datos estructurados.
