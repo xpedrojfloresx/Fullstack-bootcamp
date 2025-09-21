@@ -10,7 +10,7 @@ Este espacio lo voy a usar para subir todos los **ejercicios, proyectos y práct
 En este repo vas a encontrar:  
 - 📘 Ejercicios de **Frontend** (HTML, CSS, JavaScript, React, etc.)  
 - ⚙️ Ejercicios de **Backend** (Node.js, Express, APIs, etc.)  
-- 🗄️ **Bases de datos** (SQL, MongoDB, etc.)  
+- 🗄️ **Bases de datos** (MongoDB, etc.)  
 - 🧪 **Prácticas de testing**  
 - 🎯 Proyectos integradores  
 
@@ -25,7 +25,7 @@ El objetivo principal es **aprender, practicar y mejorar mis habilidades** como 
 - 🌐 HTML5 / CSS3 / JavaScript  
 - ⚛️ React  
 - 🟢 Node.js + Express  
-- 🗄️ MySQL / MongoDB  
+- 🗄️ MongoDB  
 - 🧑‍💻 Git & GitHub  
 
 ---
