@@ -1,0 +1,42 @@
+header{
+    padding: 50px;
+    text-align: center;
+    background-color: #575757;
+}
+
+nav ul  {
+  display: none; /* Oculta el menú desplegable por defecto */
+  position: absolute; /* Posiciona el submenú en relación con su elemento padre (.dropdown) */
+  background-color: #575757;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  min-width: 160px;
+  z-index: 1; 
+  float: left;
+}
+
+nav ul:hover ul {
+    display: block; /* Muestra el menú desplegable al pasar el ratón */
+}
+
+nav > li {
+    display: inline-block;   
+}
+
+nav a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+} 
+
+nav a:hover {
+  background-color: red;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px 15px;
+}
