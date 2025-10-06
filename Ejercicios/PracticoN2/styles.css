@@ -1,0 +1,196 @@
+/* Estilos proyecto 1 */
+
+.bodypry1{
+    background-color: rgb(80, 80, 90);
+}
+
+.bodypry1 a{
+    text-decoration: none;
+    color: white;
+}
+.headerpry1{
+    background: white;
+    text-align: center;
+}    
+
+.headerpry1 h1{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 80px;
+    color: rgb(80, 80, 94);
+}   
+
+.sectionpry1Inicio p{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.842);
+    text-align: justify;
+}
+
+/* Aspiradoras */
+.sectionpry1Productos .aspiradoras h2{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 40px;
+    color: rgb(255, 194, 194);
+    margin-left: 20px;
+    letter-spacing: 3px;
+}
+
+.sectionpry1Productos .aspiradoras img{
+    border:solid;
+    border-width: thick;
+    border-color: rgb(255, 194, 194);
+    margin-left: 60px;
+}
+
+.sectionpry1Productos .aspiradoras p{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.842);
+    text-align: justify;
+}
+
+/* Celulares */
+.sectionpry1Productos .celulares h2{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 40px;
+    color: rgb(201, 233, 243);
+    margin-left: 20px;
+    letter-spacing: 3px;
+}
+
+.sectionpry1Productos .celulares img{
+    border:solid;
+    border-width: thick;
+    color: rgb(201, 233, 243);
+    margin-left: 60px;
+}
+
+.sectionpry1Productos .celulares p{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.842);
+    text-align: justify;
+}
+
+/* Consolas */
+.sectionpry1Productos .consolas h2{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 40px;
+    color: rgb(202, 202, 202);
+    margin-left: 20px;
+    letter-spacing: 3px;
+}
+
+.sectionpry1Productos .consolas img{
+    border:solid;
+    border-width: thick;
+    color: rgb(202, 202, 202);
+    margin-left: 60px;
+}
+
+.sectionpry1Productos .consolas p{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.842);
+    text-align: justify;
+}
+
+/* Home Theathers */
+.sectionpry1Productos .home h2{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 40px;
+    color: rgb(109, 115, 141);
+    margin-left: 20px;
+    letter-spacing: 3px;
+}
+
+.sectionpry1Productos .home img{
+    border:solid;
+    border-width: thick;
+    color: rgb(109, 115, 141);
+    margin-left: 60px;
+}
+
+.sectionpry1Productos .home p{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.842);
+    text-align: justify;
+}
+
+/* Televisores */
+.sectionpry1Productos .televisores h2{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 40px;
+    color: rgb(206, 207, 186);
+    margin-left: 20px;
+    letter-spacing: 3px;
+}
+
+.sectionpry1Productos .televisores img{
+    border:solid;
+    border-width: thick;
+    color: rgb(206, 207, 186);
+    margin-left: 60px;
+}
+
+.sectionpry1Productos .televisores p{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.842);
+    text-align: justify;
+}
+
+
+
+
+
+/* Estilos proyecto 2 */
+.bodypry2{
+    background-color: rgb(0, 255, 136);
+}
+
+.bodypry2 a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.headerpry2{
+    color: rgb(255, 251, 0);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sectionpry2Imagenes1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.sectionpry2Imagenes1 img{
+    border: solid;
+    border-width: 10px;
+    border-color: rgb(255, 255, 255);
+
+}
+
+
+
+
+
+/* Estilos proyecto 3 */
+
