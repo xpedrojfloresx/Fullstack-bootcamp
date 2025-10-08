@@ -185,7 +185,6 @@
     border: solid;
     border-width: 10px;
     border-color: rgb(255, 255, 255);
-
 }
 
 
@@ -193,4 +192,90 @@
 
 
 /* Estilos proyecto 3 */
+.headerpry3{
+    align-items: center;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 20px;
+    color: rgb(180, 90, 163);
+    
+}
 
+.headerpry3 h1{
+    font-size: 50px;
+}
+.headerpry3 img{
+    height: 30%;
+    width: 30%;
+}
+
+.centuryResort p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 103, 172);
+    /* max-width: 1200px; */
+}
+
+.centuryResort img{
+    height: 30%;
+    width: 30%;
+    float: right;
+    margin: 0px;
+}
+
+.centuryResort h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(180, 90, 163);
+    letter-spacing: 10px;
+}
+
+.caribeanResort p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* max-width: 1200px; */
+    color: rgb(0, 103, 172);
+    margin-left: 50px;
+}
+
+.caribeanResort img{
+    height: 30%;
+    width: 30%;
+    float: left;
+    margin: 0px;
+}
+
+.caribeanResort h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(180, 90, 163);
+    letter-spacing: 10px;
+}
+
+.animalResort p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* max-width: 1200px; */
+    color: rgb(0, 103, 172);
+    margin-left: 0px;
+    
+}
+
+.animalResort img{
+    height: 30%;
+    width: 30%;
+    float: right;
+    margin: 0px;
+}
+
+.animalResort h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(180, 90, 163);
+    letter-spacing: 10px;
+}
+
+.footerpry3 img{
+    margin-top: 50px;
+    height: 200%;
+    width: 100%;
+}
+
+.footerpry3 a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
