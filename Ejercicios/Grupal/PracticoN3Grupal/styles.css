@@ -1,0 +1,104 @@
+body{
+    background-color: #EDECE9;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+header img{
+    width: 100%;
+    height: auto;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: #EF6D24;
+}
+
+.info li{
+    list-style: none;
+}
+.info .uno{
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 10px;
+    color: #EF6D24;
+}
+
+main h1{
+    color: #775548;
+}
+
+.instalaciones h2{
+    background-color: #775548;
+    color: #E1D4CF;
+}
+
+.instalaciones ul{
+    .duchas{
+        font-weight: bold;
+    }
+    color: #775548; 
+}
+
+.alquileres {
+    color: #775548; 
+}
+
+.alquileres h2{
+    background-color: #775548;
+    color: #E1D4CF;
+}
+
+.alquileres a{
+    color: #EF6D24;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.notas {
+    color: #775548; 
+}
+
+.notas h2{
+    background-color: #775548;
+    color: #E1D4CF;
+}
+
+.notas ul{
+    .nacion{
+        color: #3CB2CD;
+    }
+    .pagina{
+        color: #F05A7E;
+    }
+    font-weight: bold;
+}
+
+.elegirnos{
+    color: #775548; 
+}
+
+.elegirnos h2{
+    background-color: #775548;
+    color: #D8B03B;
+}
+
+.elegirnos ol {
+    .cinco{
+        font-weight: bold;
+    }
+}
+
+.elegirnos a{
+    color: #EF6D24;
+    font-weight: bold;
+}
+
+@media  screen and (max-width: 600px) {
+    .info{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+}

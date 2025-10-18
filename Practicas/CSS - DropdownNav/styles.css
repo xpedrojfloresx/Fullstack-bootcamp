@@ -80,3 +80,16 @@ body{
 .menu li:hover .submenu1{
     display: block; /* muestra el submenu al pasar el mouse */
 }
+
+.contenido {
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.contenido p {
+    font-size: 50px;
+    color: white;
+    margin: 20px;
+}   
