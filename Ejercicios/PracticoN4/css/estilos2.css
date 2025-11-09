@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    background-color: #1B2838;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.headerIndex h1{
+    text-align: left;
+    font-weight: normal;
+    font-size: 250%;
+    margin-bottom: 10px;
+}
+
+.vendidos h3{
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: normal;
+    border-style: dotted;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.mario8 h4{
+    font-weight: normal;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.mario8 img{
+    width: 40%;
+    margin-left: 30px;
+}
+
+.mario8 p{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.mario8 button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #2C8F20;
+    color: #CBD4BF;
+    padding: 15px;
+    border-radius: 5px;
+    border-style:solid;
+    font-size: 20px;
+}
+
+.mario8 button:hover{
+    color: white;
+    background-color: #8CD328;
+}
+
+.mario8 a{
+    text-decoration: none;
+}
+
+.mortal11 div{
+    border-style: dotted;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    
+}
+
+.mortal11 h4{
+    font-weight: normal;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.mortal11 img{
+    width: 40%;
+    margin-left: 30px;
+}
+
+.mortal11 p{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.mortal11 button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #2C8F20;
+    color: #CBD4BF;
+    padding: 15px;
+    border-radius: 5px;
+    border-style:solid;
+    font-size: 20px;
+}
+
+.mortal11 button:hover{
+    color: white;
+    background-color: #8CD328;
+}
+
+.mortal11 a{
+    text-decoration: none;
+}
+
+.desarrollado h2{
+    font-weight: normal;
+    font-style: italic;
+    text-align: right;
+    border-style: dotted;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+/* Estilos Mario Kart 8 */
+
+.headerMario img{
+    width: 20%;
+    border-radius: 300px;
+    float: right;
+}
+
+.section1Mario h2{
+    font-weight: normal;
+}
+
+.section1Mario p{
+    font-size: 20px;
+}
+
+.section2Mario h2{
+    font-weight: normal;
+    border-style: dotted;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+}
+
+.section2Mario img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section2Mario div{
+    font-size: 20px;
+    border-style: dotted;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.section2Mario button{
+    display: block;
+    margin-right: auto;
+    background-color: #2C8F20;
+    color: #CBD4BF;
+    padding: 15px;
+    border-radius: 5px;
+    border-style:solid;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.section2Mario button:hover{
+    color: white;
+    background-color: #8CD328;
+}
+
+.section2Mario a{
+    text-decoration: none;
+}
+
+/* Estilos Mortal Kombat 11 */
+
+.headerMortal img{
+    width: 20%;
+    border-radius: 300px;
+    float: right;
+}
+
+.section1Mortal h2{
+    font-weight: normal;
+}
+
+.section1Mortal img{
+    width: 40%;
+}
+
+.section1Mortal p{
+    font-size: 20px;
+}
+
+.section2Mortal h2{
+    font-weight: normal;
+    border-style: dotted;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+}
+
+.section2Mortal img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.section2Mortal div{
+    font-size: 20px;
+    border-style: dotted;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.section2Mortal button{
+    display: block;
+    margin-right: auto;
+    background-color: #2C8F20;
+    color: #CBD4BF;
+    padding: 15px;
+    border-radius: 5px;
+    border-style:solid;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.section2Mortal button:hover{
+    color: white;
+    background-color: #8CD328;
+}
+
+.section2Mortal a{
+    text-decoration: none;
+}
