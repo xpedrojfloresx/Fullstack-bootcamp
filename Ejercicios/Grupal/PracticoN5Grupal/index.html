@@ -1,71 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./bucles.js"></script>
-    <link rel="stylesheet" href="./styles.css">
-    <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Matias Serrano - Pedro Flores - Veterinarias</title>
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <a href="#"><img src="./img/vet.png" alt=""></a>
-        </div>
-        <div class="busqueda">
-            <form action="" method="">
-                <input 
-                    type="search" 
-                    id="campo-busqueda"  
-                    placeholder="¿Que estas buscando?"
-                >
-                <button>🔍</button>    
-            </form>
-        </div>
-        <div class="nosotros"> 
-            <button>Nosotros</button>|
-            <button>Contacto</button>|
-            <button>Home</button>|
-        </div>
+      <div class="logo">
+        <a href="#"><img src="./img/vet.png" alt="" /></a>
+      </div>
+      <div class="busqueda">
+        <form action="" method="">
+          <input
+            type="search"
+            id="campo-busqueda"
+            placeholder="¿Que estas buscando?"
+          />
+          <button>🔍</button>
+        </form>
+      </div>
+      <div class="nosotros">
+        <button>Nosotros</button>| <button>Contacto</button>|
+        <button>Home</button>|
+      </div>
     </header>
-    <main style="background-image: url(./img/OPSEG70.jpg); background-size: cover;">
-        <br>
-        <h2 class="productosDestacados">Productos Destacados</h2>
-        <div class="productos">
-            <div class="productoUno">
-                <img src="https://www.veterinariasgp.com.ar/mods/html/fil/Model/Product/237/excellentformula.png.webp" alt="">
-                <h3>EXCELLENT FORMULA ADULTOS X 20 KG.</h3>
-                <h2>$59.000,00</h2>
-                <br>
-                <button>Comprar!</button>
-            </div>
-            <div class="productoDos">
-                <img src="https://www.veterinariasgp.com.ar/mods/html/fil/Model/Product/663/rcminiad.png.webp" alt="">
-                <h3>ROYAL CANIN MINI ADULT X 7.5 KG.</h3>
-                <h2>$120.000,00</h2>
-                <br>
-                <button>Comprar!</button>
-            </div>
-            <div class="productoTres">
-                <img src="https://www.veterinariasgp.com.ar/mods/html/fil/Model/Product/760/rcgastro.png.webp" alt="">
-                <h3>ROYAL CANIN DOG GASTROINTESTINAL X 10 KG</h3>
-                <h2>$80.000,00</h2>
-                <br>
-                <button>Comprar!</button>
-            </div>
+    <main
+      style="background-image: url(./img/OPSEG70.jpg); background-size: cover"
+    >
+      <br />
+      <div class="banner">
+        <img
+          src="https://cordoba.pluspet.com.ar/cdn/shop/files/banner-web-noviembre.png?v=1762559166&width=2000"
+          alt=""
+        />
+      </div>
+      <div class="categorias">
+        <div class="perrosAdultos">
+          <img
+            src="https://cordoba.pluspet.com.ar/cdn/shop/collections/PERRO_ADULTO-01_300x_825d69c9-71f8-4bcb-895a-f2298f14e358.jpg?v=1622918528&width=240"
+            alt=""
+          />
+          <h3>Perros Adultos</h3>
         </div>
+        <div class="perrosCachorros">
+          <img
+            src="https://cordoba.pluspet.com.ar/cdn/shop/collections/FOTOCACHORRO-01_300x_c8acfd75-c11b-458f-8f88-7f833859b064.jpg?v=1728392908&width=240"
+            alt=""
+          />
+          <h3>Perros Cachorros</h3>
+        </div>
+        <div class="gatosAdultos">
+          <img
+            src="https://cordoba.pluspet.com.ar/cdn/shop/collections/GATO_ADULTO-01_300x_cbe9568e-ad71-4c7c-807f-eca251959445.jpg?v=1728391746&width=240"
+            alt=""
+          />
+          <h3>Gatos Adultos</h3>
+        </div>
+        <div class="gatosCachorros">
+          <img
+            src="https://cordoba.pluspet.com.ar/cdn/shop/collections/FOTO_GATITO-01_300x_7f044d2f-a950-4ca3-8cf2-55ba8d766676.jpg?v=1728393555&width=240"
+            alt=""
+          />
+          <h3>Gatos Cachorros</h3>
+        </div>
+        <div class="gatosCastrados">
+          <img
+            src="https://cordoba.pluspet.com.ar/cdn/shop/collections/kabo-p6yH8VmGqxo-unsplash_e38b195d-40cc-4b45-8d3d-4f1918e2d93c.jpg?v=1728391911&width=240"
+            alt=""
+          />
+          <h3>Gatos Castrados</h3>
+        </div>
+      </div>
+      <br />
+      <div
+        class="productos"
+        style="
+          background-image: url(./img/fondoTrama.png);
+          background-size: 30%;
+          border-radius: 100px;
+        "
+      >
+        <h1 class="productosDestacados" style="width: 100%;">Productos Destacados</h1>
+        <div class="productoUno">
+          <img
+            src="https://www.veterinariasgp.com.ar/mods/html/fil/Model/Product/237/excellentformula.png.webp"
+            alt=""
+          />
+          <h3>EXCELLENT FORMULA ADULTOS X 20 KG.</h3>
+          <h2>$59.000,00</h2>
+          <br />
+          <button>Agregar al carrito</button>
+        </div>
+        <div class="productoDos">
+          <img
+            src="https://www.veterinariasgp.com.ar/mods/html/fil/Model/Product/663/rcminiad.png.webp"
+            alt=""
+          />
+          <h3>ROYAL CANIN MINI ADULT X 7.5 KG.</h3>
+          <h2>$120.000,00</h2>
+          <br />
+          <button>Agregar al carrito</button>
+        </div>
+        <div class="productoTres">
+          <img
+            src="https://www.veterinariasgp.com.ar/mods/html/fil/Model/Product/760/rcgastro.png.webp"
+            alt=""
+          />
+          <h3>ROYAL CANIN DOG GASTROINTESTINAL X 10 KG</h3>
+          <h2>$80.000,00</h2>
+          <br />
+          <button>Agregar al carrito</button>
+        </div>
+        <div class="calidad">
+          <h2>Porque son familia, merecen excelencia...</h2>
+          <p>
+            En nuestra veterinaria entendemos que las <b>mascotas</b> son mucho más que
+            simples animales de compañía; son miembros fundamentales de la
+            <b>familia</b>. Por eso, no negociamos con la salud de tu mejor amigo. Cada
+            decisión que tomamos y cada artículo que ofrecemos nace de un
+            compromiso inquebrantable con su bienestar, porque creemos que la
+            excelencia no debería ser una opción, sino la norma.
+          </p>
+          <p>
+            Seleccionamos rigurosamente cada producto de nuestro catálogo,
+            sometiéndolo a los más altos estándares del mercado veterinario
+            actual. No nos dejamos llevar solo por las tendencias; analizamos
+            ingredientes, materiales y procesos de fabricación. Trabajamos
+            únicamente con marcas y laboratorios que pueden garantizar la máxima
+            seguridad, asegurándonos de que lo que llevas a casa ha pasado por
+            un filtro de calidad exhaustivo.
+          </p>
+          <p>
+            Sabemos que una nutrición superior y el uso de accesorios seguros
+            son los cimientos indispensables para una vida larga, plena y feliz.
+            Queremos ser tu aliado de confianza en el cuidado de tu mascota,
+            brindándote la tranquilidad de saber que estás invirtiendo en
+            calidad real para devolverle un poco de todo el amor incondicional
+            que te da cada día.
+          </p>
+        </div>
+      </div>
 
-             <h2 class="accesorios">
-        Accesorios
-        </h2>
-      
-        <h3>
-                Collares
-            </h3>
-            <img src="https://m.media-amazon.com/images/I/51Lzj1dPshL._AC_.jpg">
-            
+      <h2 class="accesorios">Accesorios</h2>
+
+      <h3>Collares</h3>
+      <img src="https://m.media-amazon.com/images/I/51Lzj1dPshL._AC_.jpg" />
     </main>
-
-</body>
-
+    <footer>
+        <p>© 2025 Serrano y Flores</p>
+        <p>Todos los derechos reservados</p>
+    </footer>
+  </body>
 </html>
