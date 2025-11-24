@@ -39,7 +39,7 @@ for (i = 1; i < varCantidadDePasos; i++) {
 while (varGatosExistentes <= varCantidadDePasos){
     if(varGatosExistentes == varGatoUno){
         console.log("Gato # " + varGatosExistentes + "🐈" + pasosExistentes);
-       varGatoUno = varGatoUno + 2;
+        varGatoUno = varGatoUno + 2;
     }
     else{
         console.log("Gato # " + varGatosExistentes + "🐈‍⬛" + pasosExistentes);
@@ -47,3 +47,7 @@ while (varGatosExistentes <= varCantidadDePasos){
     }
     varGatosExistentes = varGatosExistentes + 1;
 }
+
+alert('Estas ingresando a la web de mascotas')
+alert('Aqui vas a encontrar todo lo que tu mascota necesita')
+alert('Esta pagina fue creada por Flores y Serrano')
