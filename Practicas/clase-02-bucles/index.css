@@ -1,0 +1,15 @@
+.productos{
+    display: flex; /* ordena los elementos de manera flexible (uno al lado del otro) */
+    flex-direction: column; /* ordena los elementos en columna (de arriba a abajo) */
+    flex-direction: row; /* ordena los elementos en fila (de izquierda a derecha) */
+    justify-content: space-evenly; /* hace que los elementos ocupen todo el ancho del dispositivo logrando que haga un espacio equitativo entre cada elemento */
+    flex-wrap: nowrap; /* hace que los elementos no hagan un salto de linea aunque estos ocupen todo el ancho del dispositivo */
+    flex-wrap: wrap; /* Permite que los elementos hagan un salto de linea en el momento que estos lo necesiten, es decir, cuando ocupan el ancho completo del dispositivo */
+}
+
+img{
+    width: 225px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+}

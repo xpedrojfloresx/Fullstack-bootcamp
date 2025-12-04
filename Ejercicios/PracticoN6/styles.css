@@ -1,0 +1,35 @@
+body {
+    background-color: #f9f9f9;
+    margin: 20px;
+}
+
+.integrantes {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    width: 100%;
+    max-width: 600px;
+}
+
+.integrantes dl {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 2px solid #ccc;
+}
+
+.integrantes dt {
+    font-weight: bold;
+    width: 294px;
+    text-align: left;
+    border: 2px solid #ccc;
+    
+}
+
+.integrantes dd {
+    width: 294px;
+    text-align: right;  
+    margin-left: 0px;
+    border: 2px solid #ccc;
+}
