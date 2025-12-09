@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bonus.css">
+    <title>Bonus</title>
+</head>
+<body>
+    <h1>Bonus</h1>
+    <form action="">
+        <input type="text" placeholder="Primer Nombre" id="primerNombreUno">
+        <br><br>
+        <input type="text" placeholder="Segundo Nombre" id="segundoNombreUno">
+        <br><br>
+        <input type="text" placeholder="Primer Apellido" id="primerApellidoUno">
+        <br><br>
+        <input type="text" placeholder="Segundo Apellido" id="segundoApellidoUno">
+        <br><br>
+        <button
+        type="button"
+        onclick="capturaDatos(), console.log(integranteUno)"
+        >Completar</button>
+        <br><br>
+        <input type="text" placeholder="Primer Nombre" id="primerNombreDos">
+        <br><br>
+        <input type="text" placeholder="Segundo Nombre" id="segundoNombreDos">
+        <br><br>
+        <input type="text" placeholder="Primer Apellido" id="primerApellidoDos">
+        <br><br>
+        <input type="text" placeholder="Segundo Apellido" id="segundoApellidoDos">
+        <br><br>
+        <button
+        type="button"
+        onclick="capturaDatos(), console.log(integranteDos)"
+        >Completar</button>
+        <br><br>
+        <button type="button" onclick="compararNombres(0, 1)">Comparar nombres</button>
+        <button type="button" onclick="compararNombres(2, 3)">Comparar Apellidos</button>
+    </form>
+
+    <br>
+
+    <script src="../js/bonus.js"></script>
+
+    <a href="../pages/index.html" target="_blank" rel="noopener noreferrer">Link a Ejercicio Main</a>
+</body>
+</html>

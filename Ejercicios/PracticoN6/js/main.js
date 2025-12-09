@@ -16,10 +16,10 @@ const integranteDos = [
 ];
 
 const integrantes = [
-  (PrimerNombre = "Primeros nombres"),
-  (SegundoNombre = "Segundos nombres"),
-  (PrimerApellido = "Primeros apellidos"),
-  (SegundoApellido = "Segundos apellidos"),
+  'Primeros Nombres',
+  'Segundos Nombres',
+  'Primeros Apellidos',
+  'Segundos Apellidos',
 ];
 
 let espacioSegNombreUno = " ";
@@ -60,65 +60,62 @@ function nombresIntegrantes(integranteUno, integranteDos) {
 function verificarEspacios() {
   if (integranteUno[1].innerHTML == "") {
     espacioSegNombreUno = "";
+  }else{
+    espacioSegNombreUno = " ";
   }
   if (integranteUno[3].innerHTML == "") {
     espacioSegApellidoUno = "";
+  }else{
+    espacioSegApellidoUno = " ";
   }
 
   if (integranteDos[1].innerHTML == "") {
     espacioSegNombreDos = "";
+  }else{
+    espacioSegNombreDos = " ";
   }
   if (integranteDos[3].innerHTML == "") {
     espacioSegApellidoDos = "";
+  }else{
+    espacioSegApellidoDos = " ";
   }
 }
 
 function compararNombres(IndiceUno, IndiceDos) {
   if (
-    integranteUno[IndiceUno].innerHTML == integranteDos[IndiceUno].innerHTML ||
-    integranteUno[IndiceDos].innerHTML == integranteDos[IndiceDos].innerHTML
-  ) {
+    integranteUno[IndiceUno].innerHTML == integranteDos[IndiceUno].innerHTML) {
     var color = prompt(
       "Asignar un color distintivo para la igualdad de nombres"
     );
-    integranteUno[i].style.color = color;
-    integranteDos[i].style.color = color;
+    integranteUno[IndiceUno].style.color = color;
+    integranteDos[IndiceUno].style.color = color;
   }
 
-  if (
-    integranteUno[IndiceUno].innerHTML !== integranteDos[IndiceUno].innerHTML ||
-    (integranteUno[IndiceDos].innerHTML !== "" &&
-      integranteDos[IndiceDos].innerHTML !== "")
-  ) {
-    console.log(
-      "No hay coincidencias entre los " +
-        integrantes[2] +
-        " o los campos estan vacios."
+  if(integranteUno[IndiceDos].innerHTML == integranteDos[IndiceDos].innerHTML){
+    var color = prompt(
+      "Asignar un color distintivo para la igualdad de nombres"
     );
+    integranteUno[IndiceDos].style.color = color;
+    integranteDos[IndiceDos].style.color = color;
   }
-  if (
-    integranteUno[IndiceUno].innerHTML !== integranteDos[IndiceUno].innerHTML ||
-    (integranteUno[IndiceDos].innerHTML !== "" &&
-      integranteDos[IndiceDos].innerHTML !== "")
-  ) {
-    console.log(
-      "No hay coincidencias entre los " +
-        integrantes[3] +
-        " o los campos estan vacios."
-    );
+
+  if(integranteUno[IndiceUno].innerHTML != integranteDos[IndiceUno].innerHTML){
+    console.log("No hay coincidencias entre los " + integrantes[IndiceUno])
+  }
+
+  if(integranteUno[IndiceDos].innerHTML != integranteDos[IndiceDos].innerHTML){
+    console.log("No hay coincidencias entre los " + integrantes[IndiceDos])
   }
 }
 
-function confirmNombres(mensajeUno, mensajeDos) {
-  mensajeUno = "Desea comparar los nombres de los integrantes?";
-  mensajeDos = "Desea comparar los apellidos de los integrantes?";
-  if (confirm(mensajeUno)) {
+function confirmNombres() {
+  if (confirm("Desea comparar los nombres de los integrantes?")) {
     compararNombres(0, 1);
   } else {
     console.log("No se compararon los nombres de los integrantes.");
   }
 
-  if (confirm(mensajeDos)) {
+  if (confirm("Desea comparar los apellidos de los integrantes?")) {
     compararNombres(2, 3);
   } else {
     console.log("No se compararon los apellidos de los integrantes.");
