@@ -14,7 +14,7 @@
         </div>
         <nav>
             
-            <img src="./img/logoIntegrador.png" alt="" class="logoHeader">
+            <img onclick="menu()" src="./img/logoIntegrador.png" alt="" class="logoHeader">
             
             <div class="searchHeader">
                 <input type="text" placeholder="¿Qué estás buscando?">
@@ -22,9 +22,9 @@
             </div>
             <div class="aboutUsHeader">
                 <ul>
-                    <li><a href="./pages/alta.html" target="_blank" rel="noopener noreferrer">Alta</a></li>
-                    <li><a href="./pages/nosotros.html" target="_blank" rel="noopener noreferrer">Nosotros</a></li>
-                    <li><a href="./pages/contacto.html" target="_blank" rel="noopener noreferrer">Contacto</a></li>
+                    <li><a href="./pages/alta.html" target="_self" rel="noopener noreferrer">Alta</a></li>
+                    <li><a href="./pages/nosotros.html" target="_self" rel="noopener noreferrer">Nosotros</a></li>
+                    <li><a href="./pages/contacto.html" target="_self" rel="noopener noreferrer">Contacto</a></li>
                     <li><button><img src="./img/ico/user.png" alt=""></button></li>
                     <li><button><img src="./img/ico/cart.png" alt=""></button></li>
                 </ul>   
@@ -97,5 +97,11 @@
         <hr>
         <p>©Todos los derechos reservados</p>
     </footer>
+
+    <script>
+        function menu(){
+            window.location.href = '../index.html';
+        }
+    </script>
 </body>
 </html>

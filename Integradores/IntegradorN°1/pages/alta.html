@@ -10,7 +10,7 @@
     <header class="headerFont">
         <nav>
 
-            <img src="../img/logoIntegrador.png" alt="" class="logoHeader">
+            <img onclick="menu()" src="../img/logoIntegrador.png" alt="" class="logoHeader">
             
             <div class="searchHeader">
                 <input type="text" placeholder="¿Qué estás buscando?">
@@ -18,9 +18,9 @@
             </div>
             <div class="aboutUsHeader">
                 <ul>
-                    <li><a href="./pages/alta.html" target="_blank" rel="noopener noreferrer">Alta</a></li>
-                    <li><a href="./pages/nosotros.html" target="_blank" rel="noopener noreferrer">Nosotros</a></li>
-                    <li><a href="./pages/contacto.html" target="_blank" rel="noopener noreferrer">Contacto</a></li>
+                    <li><a href="../pages/alta.html" target="_self" rel="noopener noreferrer">Alta</a></li>
+                    <li><a href="../pages/nosotros.html" target="_self" rel="noopener noreferrer">Nosotros</a></li>
+                    <li><a href="../pages/contacto.html" target="_self" rel="noopener noreferrer">Contacto</a></li>
                     <li><button><img src="../img/ico/user.png" alt=""></button></li>
                     <li><button><img src="../img/ico/cart.png" alt=""></button></li>
                 </ul>   
@@ -29,10 +29,10 @@
     </header>
     <main>
         <div class="contenedorRegistro">
-            <h2>Registra los productos</h2>
-            <p>¡Carga los productos, consulta el stock y mas!</p>
+            <h2 class="headerFont">Registra los productos</h2>
+            <p class="bodyFont">¡Carga los productos, consulta el stock y mas!</p>
 
-            <form action="">
+            <form action="" class="bodyFont">
                 <label for="">Nombre</label>
                 <br>
                 <input type="text">
@@ -75,9 +75,20 @@
                 <br>
                 <label for="">Foto</label>
                 <br>
-                <input type="text">                                                                                                                
+                <input type="text">
+                <br>
+                <button class="headerFont" type="submit" style="background-color: #0868F3;">Enviar formulario</button>
+                <br>
+                <button class="headerFont" type="reset" style="margin-bottom: 30px; background-color: #DC3545;">Borrar los datos</button>                                                                                                          
             </form>
         </div>
     </main>    
+
+
+    <script>
+        function menu(){
+            window.location.href = '../index.html';
+        }
+    </script>
 </body>
 </html>
