@@ -68,7 +68,6 @@ nav{
 }
 
 .logoHeader {
-    background-color: white;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     margin-top: 15px;
@@ -139,7 +138,7 @@ nav{
 
 main{
     height: 525px;
-    background-image: url("../img/bg/bg-main.png");
+    background-image: url("https://ocm-it.com.mx/assets/images/interiores/blogs/2020/diciembre/fondos-navidad-teams/03.png");
     background-size: cover;
     background-position: center;
 
