@@ -34,6 +34,7 @@ body {
   margin: 0; 
   padding: 0; 
   box-sizing: border-box; 
+  background-color: #F9F9F9;
 }
 
 /* Alta styles for header section */
@@ -68,7 +69,8 @@ nav{
 }
 
 .logoHeader{
-    max-height: 100px;
+    height: 200px;
+    margin-top: 30px;
 }
 
 .searchHeader{
@@ -136,4 +138,58 @@ nav{
 
 .aboutUsHeader button:hover{
     transform: scale(1.1);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.margins{
+    margin: 20px;
+    background-color: #FFFFFF;
+}
+
+.aboutUsContainer{
+    margin-top: 50px;
+    width: 1000px;
+    height: 100%;
+    
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 1px grey;
+
+    margin-bottom: 60px;
+}
+
+.aboutUsContainer h1{
+    color: #31A9FD;
+}
+
+.aboutUsContainer p{
+    text-align: justify;
+}
+
+
+hr{
+    margin-left: 150px;
+    margin-right: 150px;
+} 
+
+footer{
+    margin-left: 150px;
+    margin-right: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer img{
+    max-height: 150px;
+    filter: grayscale(100%);
+}
+
+footer p{
+    margin: 0;
 }

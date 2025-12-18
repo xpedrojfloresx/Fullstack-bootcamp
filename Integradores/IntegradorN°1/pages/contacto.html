@@ -10,7 +10,7 @@
     <header class="headerFont">
         <nav>
 
-            <img onclick="menu()" src="../img/logoIntegrador.png" alt="" class="logoHeader">
+            <img onclick="menu()" src="../img/logoGameKeys.png" alt="" class="logoHeader">
             
             <div class="searchHeader">
                 <input type="text" placeholder="¿Qué estás buscando?">
@@ -27,11 +27,32 @@
             </div>
         </nav>
     </header>   
+    <main>
+        <div class="contactContainer">
+            <h1 class="headerFont">Contactanos</h1>
+            <form action="">
+                <div class="nameNemail">
+                    <input class="name" type="text" placeholder="Nombre y Apellido" required min="0" max="50">
+                    <input class="email" type="text" placeholder="Email (example@mail.com)" required min="0" max="30">
+                </div>
+                <br>
+                <input class="cel" type="text" placeholder="N° de télefono" required min="0" max="10">
+                <br><br>
+                <input class="msj" type="text" placeholder="Tu mensaje">
+                <br><br>
+                <div class="sendButton">
+                    <button type="submit" class="headerFont">Enviar mensaje</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <hr>
+    <footer class="bodyFont">
+        <p>©Todos los derechos reservados</p>
+        <img src="../img/logoGameKeys.png" alt="">
+    </footer>
     
-    <script>
-        function menu(){
-            window.location.href = '../index.html';
-        }
-    </script>
+    <script src="../js/functions.js"></script>
 </body>
 </html>

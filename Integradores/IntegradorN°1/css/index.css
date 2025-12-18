@@ -68,7 +68,8 @@ nav{
 }
 
 .logoHeader{
-    max-height: 100px;
+    height: 200px;
+    margin-top: 30px;
 }
 
 .searchHeader{
@@ -247,11 +248,26 @@ main div p{
 }
 
 /* Index styles for footer section */
+hr{
+    margin-left: 150px;
+    margin-right: 150px;
+} 
 
 footer{
     margin-left: 150px;
     margin-right: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
+
+footer img{
+    max-height: 150px;
+    filter: grayscale(100%);
+}
+
+
 
 /* Media Queries for Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
@@ -267,6 +283,11 @@ footer{
     .gamesCards {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    hr{
+        margin-left: 50px;
+        margin-right: 50px;    
     }
 
     footer {
@@ -364,6 +385,11 @@ footer{
 
     .promoHeader p {
         font-size: 11px; 
+    }
+
+    hr{
+        margin-left: 20px;
+        margin-right: 20px;        
     }
 
     footer {

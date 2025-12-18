@@ -34,6 +34,7 @@ body {
   margin: 0; 
   padding: 0; 
   box-sizing: border-box; 
+  background-color: #F9F9F9;
 }
 
 
@@ -69,7 +70,8 @@ nav{
 }
 
 .logoHeader{
-    max-height: 100px;
+    height: 200px;
+    margin-top: 30px;
 }
 
 .searchHeader{
@@ -144,13 +146,12 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F9F9F9;
 }
 
 
 .contenedorRegistro{
     margin-top: 30px;
-    margin-bottom: 30px;
+ 
     width: 500px;
     height: 100%;
     background-color: #FFFFFF;
@@ -185,4 +186,27 @@ main{
 
 .contenedorRegistro button:hover{
     box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.5); 
+}
+
+hr{
+    margin-left: 150px;
+    margin-right: 150px;
+} 
+
+footer{
+    margin-left: 150px;
+    margin-right: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer img{
+    max-height: 150px;
+    filter: grayscale(100%);
+}
+
+footer p{
+    margin: 0;
 }
