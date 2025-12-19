@@ -44,13 +44,13 @@ header{
     color: white;
 }
 
-.promoHeader{
+.div_headerPromo{
     background-color: #26356C;
     height: 40px;
     width: auto;
 }
 
-.promoHeader p{
+.div_headerPromo p{
     margin: 0px;
     padding: 0px;
     text-align: center;
@@ -67,25 +67,26 @@ nav{
     max-height: 100px;
 }
 
-.logoHeader{
+.img_headerLogo{
+    cursor: pointer;
     height: 200px;
     margin-top: 30px;
 }
 
-.searchHeader{
+.div_headerSearchBar{
     margin-top: 60px;
     display: flex;
     align-items: center;
 }
 
-.searchHeader input{
+.div_headerSearchBar input{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 30px 0 0 30px;
     width: 500px;
 }
 
-.searchHeader button{
+.div_headerSearchBar button{
     padding: 9px 15px;
     background-color: #2F82FB;
     color: white;
@@ -94,11 +95,11 @@ nav{
     border-radius: 0 30px 30px 0;
 }
 
-.searchHeader img{
+.div_headerSearchBar img{
     max-width: 17px;
 }
 
-.aboutUsHeader ul{
+.div_headerAboutUs ul{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -107,26 +108,26 @@ nav{
     list-style-type: none;
 }
 
-.aboutUsHeader li{
+.div_headerAboutUs li{
     margin-top: 15px;
 }
 
-.aboutUsHeader a{
+.div_headerAboutUs a{
     display: inline-block;
     text-decoration: none;
     color: white;
     transition: transform 0.3s ease-in-out;
 }
 
-.aboutUsHeader a:hover{
+.div_headerAboutUs a:hover{
     transform: scale(1.1);
 }
 
-.aboutUsHeader img{
+.div_headerAboutUs img{
     max-width: 20px;
 }
 
-.aboutUsHeader button{
+.div_headerAboutUs button{
     justify-content: center;
     align-items: center;
     padding: 5px;
@@ -135,7 +136,7 @@ nav{
     transition: transform 0.3s ease-in-out;
 }
 
-.aboutUsHeader button:hover{
+.div_headerAboutUs button:hover{
     transform: scale(1.1);
 }
 
@@ -166,6 +167,8 @@ main div{
     background-position: center;
 
     color: white;
+
+    cursor: pointer;
 }
 
 main div:hover{
@@ -187,25 +190,25 @@ main div p{
 
 /* Index styles for section "One" */
 
-.sectionOne{
+.section_products{
     height: 620px;
     margin-left: 150px;
     margin-right: 150px;
 }
 
-.sectionOne h2{
+.section_products h2{
     margin-bottom: 0px;
 }
 
-.gamesCards{
+.div_sectionGamesCards{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
 
-.gamesCards div{
-    height: 400px;
+.div_sectionGamesCards div{
+    height: 450px;
     width: 200px;
     background-color: white;
     border-radius: 20px;
@@ -216,35 +219,110 @@ main div p{
     flex-direction: column;
 }
 
-.gamesCards div:hover{
+.div_sectionGamesCards div:hover{
     transform: scale(1.05);
     box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
 }
 
-.gamesCards div img{
+.div_sectionGamesCards div img{
     width: 100%;
     height: auto;
     display: block;
     border-radius: 20px;
 }
 
-.gamesCards div h3{
+.div_sectionGamesCards div h3{
     margin-left: 10px;
 }
-.gamesCards div h4{
+.div_sectionGamesCards div h4{
     margin-left: 10px;
     margin-top: 0px;
 }
-.gamesCards h4 img{
+.div_sectionGamesCards h4 img{
     width: 10%;
     display: inline-block;
     vertical-align: middle;
     margin-right: 2px;
 }
-.gamesCards div p{
+.div_sectionGamesCards div p{
     margin-left: 10px;
     margin-top: auto;
     font-size: large;
+}
+.div_sectionGamesCards button{
+    border: none;
+    margin: 10px;
+    height: 30px;
+    width: auto;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+
+    cursor: pointer;
+}
+.div_sectionGamesCards button:hover{
+    box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.5); 
+}
+
+/* Estilo del cuadro */
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 50px 20px 20px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+}
+
+dialog p{
+    text-align: justify;
+}
+
+dialog img{
+    border-radius: 10px;
+}
+
+.div_btn--chart{
+    display: flex;
+    justify-content: center;
+}
+
+.btn--chart{
+    height: 40px;
+    width: 50%;
+    background-color:#0868F3;
+    border-style: none;
+    color: white;
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+
+.btn--chart:hover{
+    box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.5); 
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px); 
+}
+
+
+.boton-x {
+    position: absolute;
+    top: 0px;      
+    right: 0px; 
+    
+    background: none;
+    border: none;
+    font-size: 40px;   
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    line-height: 1;
+}
+
+.boton-x:hover {
+    color: red; 
 }
 
 /* Index styles for footer section */
@@ -271,18 +349,44 @@ footer img{
 
 /* Media Queries for Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
-    nav, .sectionOne {
+    nav, .section_products {
         margin-left: 50px;
         margin-right: 50px;
     }
 
-    .searchHeader input {
+    .div_headerSearchBar input {
         width: 300px;
     }
 
-    .gamesCards {
+    .div_sectionGamesCards {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .div_sectionGamesCards button {
+        height: 35px; 
+        margin: 8px;
+        font-size: 0.95rem; 
+    }
+
+    dialog {
+        width: 70%;          
+        max-width: 600px;     
+        padding: 25px;
+        border-radius: 15px;  
+    }
+
+    .contenedor-popup {
+        display: flex;        
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    
+    .boton-x {
+        font-size: 35px;      
+        top: 15px;
+        right: 20px;
     }
 
     hr{
@@ -314,34 +418,34 @@ footer img{
         max-height: none; 
     }
 
-    .logoHeader {
+    .img_headerLogo {
         margin-top: 10px;
         order: 1; 
     }
 
-    .searchHeader {
+    .div_headerSearchBar {
         margin-top: 10px; 
         width: 100%;
         justify-content: center;
         order: 2; 
     }
 
-    .searchHeader input {
+    .div_headerSearchBar input {
         width: 60%; 
     }
 
-    .aboutUsHeader {
+    .div_headerAboutUs {
         order: 3; 
     }
 
-    .aboutUsHeader ul {
+    .div_headerAboutUs ul {
         margin-top: 10px; 
         padding: 0;
         gap: 10px;
         justify-content: center;
     }
 
-    .aboutUsHeader li {
+    .div_headerAboutUs li {
         margin-top: 0; 
     }
 
@@ -356,14 +460,22 @@ footer img{
         height: 300px;
     }
 
-    .sectionOne {
+    .section_products {
         margin-left: 20px;
         margin-right: 20px;
         height: auto;
     }
 
-    .gamesCards div {
+    .div_sectionGamesCards div {
         width: 140px; 
+    }
+
+    .div_sectionGamesCards button {
+        height: 40px;      
+        width: 90%;        
+        margin: 10px auto; 
+        display: block;    
+        font-size: 1rem;   
     }
 
     .headerFont, h2 {
@@ -375,16 +487,26 @@ footer img{
         font-size: 1.1rem; 
     }
 
-    .cardsFont, .gamesCards div h3 {
+    .cardsFont, .div_sectionGamesCards div h3 {
         font-size: 0.9rem; 
     }
 
-    .gamesCards div p {
+    .div_sectionGamesCards div p {
         font-size: 1rem; 
     }
 
-    .promoHeader p {
+    .div_headerPromo p {
         font-size: 11px; 
+    }
+
+    dialog {
+        width: 80%; 
+        padding: 30px;
+    }
+    
+    .boton-x {
+        top: 5px;   
+        right: 10px;
     }
 
     hr{

@@ -45,20 +45,6 @@ header{
     color: white;
 }
 
-.promoHeader{
-    background-color: #26356C;
-    height: 40px;
-    width: auto;
-}
-
-.promoHeader p{
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-    font-size: small;
-    justify-content: center;
-}
-
 nav{
     display: flex;
     justify-content: space-between;
@@ -68,25 +54,26 @@ nav{
     max-height: 100px;
 }
 
-.logoHeader{
+.img_headerLogo{
+    cursor: pointer;
     height: 200px;
     margin-top: 30px;
 }
 
-.searchHeader{
+.div_headerSearchBar{
     margin-top: 60px;
     display: flex;
     align-items: center;
 }
 
-.searchHeader input{
+.div_headerSearchBar input{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 30px 0 0 30px;
     width: 500px;
 }
 
-.searchHeader button{
+.div_headerSearchBar button{
     padding: 9px 15px;
     background-color: #2F82FB;
     color: white;
@@ -95,11 +82,11 @@ nav{
     border-radius: 0 30px 30px 0;
 }
 
-.searchHeader img{
+.div_headerSearchBar img{
     max-width: 17px;
 }
 
-.aboutUsHeader ul{
+.div_headerAboutUs ul{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -108,26 +95,26 @@ nav{
     list-style-type: none;
 }
 
-.aboutUsHeader li{
+.div_headerAboutUs li{
     margin-top: 15px;
 }
 
-.aboutUsHeader a{
+.div_headerAboutUs a{
     display: inline-block;
     text-decoration: none;
     color: white;
     transition: transform 0.3s ease-in-out;
 }
 
-.aboutUsHeader a:hover{
+.div_headerAboutUs a:hover{
     transform: scale(1.1);
 }
 
-.aboutUsHeader img{
+.div_headerAboutUs img{
     max-width: 20px;
 }
 
-.aboutUsHeader button{
+.div_headerAboutUs button{
     justify-content: center;
     align-items: center;
     padding: 5px;
@@ -136,7 +123,7 @@ nav{
     transition: transform 0.3s ease-in-out;
 }
 
-.aboutUsHeader button:hover{
+.div_headerAboutUs button:hover{
     transform: scale(1.1);
 }
 
@@ -146,12 +133,12 @@ main{
     justify-content: center;
 }
 
-.margins{
+.div_main--margins{
     margin: 20px;
     background-color: #FFFFFF;
 }
 
-.aboutUsContainer{
+.div_mainAboutUs{
     margin-top: 50px;
     width: 1000px;
     height: 100%;
@@ -162,11 +149,11 @@ main{
     margin-bottom: 60px;
 }
 
-.aboutUsContainer h1{
+.div_mainAboutUs h1{
     color: #31A9FD;
 }
 
-.aboutUsContainer p{
+.div_mainAboutUs p{
     text-align: justify;
 }
 

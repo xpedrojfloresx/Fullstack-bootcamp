@@ -46,20 +46,6 @@ header{
     color: white;
 }
 
-.promoHeader{
-    background-color: #26356C;
-    height: 40px;
-    width: auto;
-}
-
-.promoHeader p{
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-    font-size: small;
-    justify-content: center;
-}
-
 nav{
     display: flex;
     justify-content: space-between;
@@ -69,25 +55,26 @@ nav{
     max-height: 100px;
 }
 
-.logoHeader{
+.img_headerLogo{
+    cursor: pointer;
     height: 200px;
     margin-top: 30px;
 }
 
-.searchHeader{
+.div_headerSearchBar{
     margin-top: 60px;
     display: flex;
     align-items: center;
 }
 
-.searchHeader input{
+.div_headerSearchBar input{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 30px 0 0 30px;
     width: 500px;
 }
 
-.searchHeader button{
+.div_headerSearchBar button{
     padding: 9px 15px;
     background-color: #2F82FB;
     color: white;
@@ -96,11 +83,11 @@ nav{
     border-radius: 0 30px 30px 0;
 }
 
-.searchHeader img{
+.div_headerSearchBar img{
     max-width: 17px;
 }
 
-.aboutUsHeader ul{
+.div_headerAboutUs ul{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -109,26 +96,26 @@ nav{
     list-style-type: none;
 }
 
-.aboutUsHeader li{
+.div_headerAboutUs li{
     margin-top: 15px;
 }
 
-.aboutUsHeader a{
+.div_headerAboutUs a{
     display: inline-block;
     text-decoration: none;
     color: white;
     transition: transform 0.3s ease-in-out;
 }
 
-.aboutUsHeader a:hover{
+.div_headerAboutUs a:hover{
     transform: scale(1.1);
 }
 
-.aboutUsHeader img{
+.div_headerAboutUs img{
     max-width: 20px;
 }
 
-.aboutUsHeader button{
+.div_headerAboutUs button{
     justify-content: center;
     align-items: center;
     padding: 5px;
@@ -137,7 +124,7 @@ nav{
     transition: transform 0.3s ease-in-out;
 }
 
-.aboutUsHeader button:hover{
+.div_headerAboutUs button:hover{
     transform: scale(1.1);
 }
 
@@ -149,7 +136,7 @@ main{
 }
 
 
-.contenedorRegistro{
+.div_mainAltaContainer{
     margin-top: 30px;
  
     width: 500px;
@@ -161,30 +148,32 @@ main{
     flex-direction: column;
 }
 
-.contenedorRegistro h2, p, form{
+.div_mainAltaContainer h2, p, form{
     margin: 40px;
     margin-bottom: 0px;
 }
 
-.contenedorRegistro form{
+.div_mainAltaContainer form{
     display: flex;
     flex-direction: column;
 }
 
 
-.contenedorRegistro input{
+.div_mainAltaContainer input{
     width: 100%;
 }
 
-.contenedorRegistro button{
+.div_mainAltaContainer button{
     height: 40px;
     border-style: none;
     color: white;
     transition: box-shadow 0.3s ease-in-out;
     border-radius: 3px;
+
+    cursor: pointer;
 }
 
-.contenedorRegistro button:hover{
+.div_mainAltaContainer button:hover{
     box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.5); 
 }
 
