@@ -1,7 +1,6 @@
-function menu(){
-    window.location.href = '../index.html';
+function menu() {
+  window.location.href = "../index.html";
 }
-
 
 const popup = document.querySelector("#popup-producto");
 const popupTitulo = document.querySelector("#popup-titulo");
@@ -12,25 +11,24 @@ const btnCerrar = document.querySelector("#btn-cerrar-popup");
 
 const botonesVer = document.querySelectorAll(".btn-more-information");
 
-botonesVer.forEach(boton => {
-    boton.addEventListener("click", () => {
-        const card = boton.closest(".div_gamesCards");
+botonesVer.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    const card = boton.closest(".div_gamesCards");
 
-        const nombre = card.getAttribute("data-name");
-        const precio = card.getAttribute("data-price");
-        const imagen = card.getAttribute("data-img");
-        const descripcion = card.getAttribute("data-descrip");
+    const nombre = card.getAttribute("data-name");
+    const precio = card.getAttribute("data-price");
+    const imagen = card.getAttribute("data-img");
+    const descripcion = card.getAttribute("data-descrip");
 
-        popupTitulo.textContent = nombre;
-        popupPrecio.textContent = precio;
-        popupImg.src = imagen;
-        popupDescrip.textContent = descripcion;
+    popupTitulo.textContent = nombre;
+    popupPrecio.textContent = precio;
+    popupImg.src = imagen;
+    popupDescrip.textContent = descripcion;
 
-        popup.showModal();
-    });
+    popup.showModal();
+  });
 });
 
-
 btnCerrar.addEventListener("click", () => {
-    popup.close();
+  popup.close();
 });

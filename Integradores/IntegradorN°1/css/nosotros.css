@@ -1,13 +1,13 @@
 /* Google font import */
 
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 
 .headerFont {
   font-family: "Google Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-variation-settings: "GRAD" 0;  
+  font-variation-settings: "GRAD" 0;
 }
 
 .bodyFont {
@@ -15,8 +15,7 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "GRAD" 0;
+  font-variation-settings: "GRAD" 0;
 }
 
 .cardsFont {
@@ -24,159 +23,158 @@
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-variation-settings: "GRAD" 0;  
+  font-variation-settings: "GRAD" 0;
   font-size: small;
 }
 
 /* Alta styles */
 
 body {
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
-  background-color: #F9F9F9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
 }
 
 /* Alta styles for header section */
 
-header{
-    height: 120px;
-    background-color: black;
-    color: white;
+header {
+  height: 120px;
+  background-color: black;
+  color: white;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    margin-left: 150px;
-    margin-right: 150px;
-    max-height: 100px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 150px;
+  margin-right: 150px;
+  max-height: 100px;
 }
 
-.img_headerLogo{
-    cursor: pointer;
-    height: 200px;
-    margin-top: 30px;
+.img_headerLogo {
+  cursor: pointer;
+  height: 200px;
+  margin-top: 30px;
 }
 
-.div_headerSearchBar{
-    margin-top: 60px;
-    display: flex;
-    align-items: center;
+.div_headerSearchBar {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
 }
 
-.div_headerSearchBar input{
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 30px 0 0 30px;
-    width: 500px;
+.div_headerSearchBar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px 0 0 30px;
+  width: 500px;
 }
 
-.div_headerSearchBar button{
-    padding: 9px 15px;
-    background-color: #2F82FB;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 0 30px 30px 0;
+.div_headerSearchBar button {
+  padding: 9px 15px;
+  background-color: #2f82fb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 30px 30px 0;
 }
 
-.div_headerSearchBar img{
-    max-width: 17px;
+.div_headerSearchBar img {
+  max-width: 17px;
 }
 
-.div_headerAboutUs ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    margin-top: 60px;
-    list-style-type: none;
+.div_headerAboutUs ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-top: 60px;
+  list-style-type: none;
 }
 
-.div_headerAboutUs li{
-    margin-top: 15px;
+.div_headerAboutUs li {
+  margin-top: 15px;
 }
 
-.div_headerAboutUs a{
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    transition: transform 0.3s ease-in-out;
+.div_headerAboutUs a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease-in-out;
 }
 
-.div_headerAboutUs a:hover{
-    transform: scale(1.1);
+.div_headerAboutUs a:hover {
+  transform: scale(1.1);
 }
 
-.div_headerAboutUs img{
-    max-width: 20px;
+.div_headerAboutUs img {
+  max-width: 20px;
 }
 
-.div_headerAboutUs button{
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    border-radius: 30px;
-    border-style: none;
-    transition: transform 0.3s ease-in-out;
+.div_headerAboutUs button {
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 30px;
+  border-style: none;
+  transition: transform 0.3s ease-in-out;
 }
 
-.div_headerAboutUs button:hover{
-    transform: scale(1.1);
+.div_headerAboutUs button:hover {
+  transform: scale(1.1);
 }
 
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.div_main--margins{
-    margin: 20px;
-    background-color: #FFFFFF;
+.div_main--margins {
+  margin: 20px;
+  background-color: #ffffff;
 }
 
-.div_mainAboutUs{
-    margin-top: 50px;
-    width: 1000px;
-    height: 100%;
-    
-    background-color: #FFFFFF;
-    box-shadow: 0px 0px 1px grey;
+.div_mainAboutUs {
+  margin-top: 50px;
+  width: 1000px;
+  height: 100%;
 
-    margin-bottom: 60px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 1px grey;
+
+  margin-bottom: 60px;
 }
 
-.div_mainAboutUs h1{
-    color: #31A9FD;
+.div_mainAboutUs h1 {
+  color: #31a9fd;
 }
 
-.div_mainAboutUs p{
-    text-align: justify;
+.div_mainAboutUs p {
+  text-align: justify;
 }
 
-
-hr{
-    margin-left: 150px;
-    margin-right: 150px;
-} 
-
-footer{
-    margin-left: 150px;
-    margin-right: 150px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+hr {
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
-footer img{
-    max-height: 150px;
-    filter: grayscale(100%);
+footer {
+  margin-left: 150px;
+  margin-right: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-footer p{
-    margin: 0;
+footer img {
+  max-height: 150px;
+  filter: grayscale(100%);
+}
+
+footer p {
+  margin: 0;
 }
