@@ -222,3 +222,114 @@ footer img {
 footer p {
   margin: 0;
 }
+
+/* Media Query para Tablets / Laptops Pequeñas (max-width: 1024px) */
+
+@media screen and (max-width: 1024px) {
+  nav,
+  footer,
+  hr {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .div_headerSearchBar input {
+    width: 300px;
+  }
+
+  .img_headerLogo {
+    height: 100px;
+    margin-top: 10px;
+    width: auto;
+  }
+
+  .div_mainContact {
+    width: 90%;
+    height: auto;
+    padding-bottom: 40px;
+  }
+}
+
+/*  Media Query para Móviles / Tablets Pequeñas (max-width: 768px) */
+
+@media screen and (max-width: 768px) {
+  header {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-height: none;
+  }
+
+  .img_headerLogo {
+    margin-top: 20px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .div_headerSearchBar {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .div_headerSearchBar input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .div_headerAboutUs ul {
+    margin-top: 20px;
+    padding-left: 0;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .div_mainContact {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+
+  .div_mainContact h1,
+  form {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .div_form--nameNemail {
+    flex-direction: column;
+  }
+
+  .div_form--nameNemail input {
+    width: 100%;
+  }
+
+  .input_form--cellphone {
+    width: 100%;
+  }
+
+  .div_form--sendButton button {
+    width: 100%;
+  }
+
+  hr {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    gap: 15px;
+    padding-bottom: 20px;
+  }
+}
