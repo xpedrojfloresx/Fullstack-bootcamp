@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>¡Hola Mundo!</h1>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bootcamp</a>
+            <div class="collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Formulario</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <h1>Bienvenido al home</h1>
+        <p>Este es el contenido principal de la página de inicio.</p>
+
+    </main>
+
+    <form class="container" id="loginForm">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+        <button type="reset" class="btn btn-primary">Limpiar datos</button>
+
+    </form>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Bootcamp. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+
 </body>
 </html>
