@@ -1,17 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div id="principal"></div>
 
-    <div id="principal">
+    <h1 id="titulo">Productos</h1>
 
-    </div>
+    <br />
 
+    <table id="tabla">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Stock</th>
+        </tr>
+      </thead>
+      <tbody id="tablaProductos">
+        <!-- Los productos se insertarán aquí dinámicamente -->
+      </tbody>
+    </table>
 
+    <p id="sin-parsear"></p>
+    <p id="parseado"></p>
+
+    <button id="btnCargarProductos">Cargar Productos</button>
+    <script src="../js/navbar.js"></script>
     <script src="../js/productos.js"></script>
-</body>
+  </body>
 </html>

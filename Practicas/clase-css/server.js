@@ -13,6 +13,8 @@ const PORT = 3000;
 /* 5. Definimos la carpeta pública */
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.post("/reciboproductos", () => {});
+
 /* 6. Iniciamos el servidor */
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
