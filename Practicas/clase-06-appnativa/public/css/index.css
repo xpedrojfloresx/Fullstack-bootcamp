@@ -1,0 +1,525 @@
+/* Google font import */
+
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+
+.headerFont {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
+.bodyFont {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
+.cardsFont {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+  font-size: small;
+}
+
+/* Index styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Index styles for header section */
+
+header {
+  height: 150px;
+  background-color: black;
+  color: white;
+}
+
+.div_headerPromo {
+  background-color: #26356c;
+  height: 40px;
+  width: auto;
+}
+
+.div_headerPromo p {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-size: small;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 150px;
+  margin-right: 150px;
+  max-height: 100px;
+}
+
+.img_headerLogo {
+  cursor: pointer;
+  height: 200px;
+  margin-top: 30px;
+}
+
+.div_headerSearchBar {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.div_headerSearchBar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px 0 0 30px;
+  width: 500px;
+}
+
+.div_headerSearchBar button {
+  padding: 9px 15px;
+  background-color: #2f82fb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 30px 30px 0;
+}
+
+.div_headerSearchBar img {
+  max-width: 17px;
+}
+
+.div_headerAboutUs ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-top: 60px;
+  list-style-type: none;
+}
+
+.div_headerAboutUs li {
+  margin-top: 15px;
+}
+
+.div_headerAboutUs a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.div_headerAboutUs a:hover {
+  transform: scale(1.1);
+}
+
+.div_headerAboutUs img {
+  max-width: 20px;
+}
+
+.div_headerAboutUs button {
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 30px;
+  border-style: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.div_headerAboutUs button:hover {
+  transform: scale(1.1);
+}
+
+/* Index styles for main section */
+
+main {
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+main div {
+  background-color: white;
+  height: 400px;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+main div:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+main div h3 {
+  margin: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: medium;
+  text-shadow: 0px 2px black;
+}
+
+main div p {
+  margin-left: 10px;
+}
+
+/* Index styles for section "One" */
+
+.section_products {
+  height: 620px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.section_products h2 {
+  margin-bottom: 0px;
+}
+
+.div_sectionGamesCards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.div_sectionGamesCards div {
+  height: 450px;
+  width: 200px;
+  background-color: white;
+  border-radius: 20px;
+
+  transition: transform 0.3s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.div_sectionGamesCards div:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.div_sectionGamesCards div img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.div_sectionGamesCards div h3 {
+  margin-left: 10px;
+}
+.div_sectionGamesCards div h4 {
+  margin-left: 10px;
+  margin-top: 0px;
+}
+.div_sectionGamesCards h4 img {
+  width: 10%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+.div_sectionGamesCards div p {
+  margin-left: 10px;
+  margin-top: auto;
+  font-size: large;
+}
+.div_sectionGamesCards button {
+  border: none;
+  margin: 10px;
+  height: 30px;
+  width: auto;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+
+  cursor: pointer;
+}
+.div_sectionGamesCards button:hover {
+  box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo del cuadro */
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+dialog {
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  max-height: 90vh;
+}
+
+dialog p {
+  text-align: justify;
+}
+
+dialog img {
+  border-radius: 15px;
+}
+
+.div_btn--chart {
+  display: flex;
+  justify-content: center;
+}
+
+.btn--chart {
+  height: 40px;
+  width: 50%;
+  background-color: #0868f3;
+  border-style: none;
+  color: white;
+  transition: box-shadow 0.3s ease-in-out;
+  border-radius: 3px;
+
+  cursor: pointer;
+}
+
+.btn--chart:hover {
+  box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.5);
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.boton-x {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  background: none;
+  border: none;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  line-height: 1;
+}
+
+.boton-x:hover {
+  color: red;
+}
+
+/* Index styles for footer section */
+hr {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+footer {
+  margin-left: 150px;
+  margin-right: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer img {
+  max-height: 150px;
+  filter: grayscale(100%);
+}
+
+/* Media Queries for Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  nav,
+  .section_products {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .div_headerSearchBar input {
+    width: 300px;
+  }
+
+  .div_sectionGamesCards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .div_sectionGamesCards button {
+    height: 35px;
+    margin: 8px;
+    font-size: 0.95rem;
+  }
+
+  dialog {
+    width: 70%;
+    max-width: 600px;
+    padding: 25px;
+    border-radius: 15px;
+  }
+
+  .contenedor-popup {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .boton-x {
+    font-size: 35px;
+    top: 15px;
+    right: 20px;
+  }
+
+  hr {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  footer {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/* Media Queries for cellphones (max-width: 768px) */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+    height: auto;
+    max-height: none;
+  }
+
+  .img_headerLogo {
+    margin-top: 10px;
+    order: 1;
+  }
+
+  .div_headerSearchBar {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+    order: 2;
+  }
+
+  .div_headerSearchBar input {
+    width: 60%;
+  }
+
+  .div_headerAboutUs {
+    order: 3;
+  }
+
+  .div_headerAboutUs ul {
+    margin-top: 10px;
+    padding: 0;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .div_headerAboutUs li {
+    margin-top: 0;
+  }
+
+  main {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 0;
+  }
+
+  main div {
+    width: 80%;
+    height: 300px;
+  }
+
+  .section_products {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: auto;
+  }
+
+  .div_sectionGamesCards div {
+    width: 140px;
+  }
+
+  .div_sectionGamesCards button {
+    height: 40px;
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+    font-size: 1rem;
+  }
+
+  .headerFont,
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  main div h3 {
+    font-size: 1.1rem;
+  }
+
+  .cardsFont,
+  .div_sectionGamesCards div h3 {
+    font-size: 0.9rem;
+  }
+
+  .div_sectionGamesCards div p {
+    font-size: 1rem;
+  }
+
+  .div_headerPromo p {
+    font-size: 11px;
+  }
+
+  dialog {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .boton-x {
+    top: 5px;
+    right: 10px;
+  }
+
+  hr {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  footer {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+}

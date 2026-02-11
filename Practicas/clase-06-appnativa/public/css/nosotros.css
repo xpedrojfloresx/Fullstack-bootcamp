@@ -1,0 +1,267 @@
+/* Google font import */
+
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+
+.headerFont {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
+.bodyFont {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
+.cardsFont {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+  font-size: small;
+}
+
+/* Alta styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+/* Alta styles for header section */
+
+header {
+  height: 120px;
+  background-color: black;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 150px;
+  margin-right: 150px;
+  max-height: 100px;
+}
+
+.img_headerLogo {
+  cursor: pointer;
+  height: 200px;
+  margin-top: 30px;
+}
+
+.div_headerSearchBar {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.div_headerSearchBar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px 0 0 30px;
+  width: 500px;
+}
+
+.div_headerSearchBar button {
+  padding: 9px 15px;
+  background-color: #2f82fb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 30px 30px 0;
+}
+
+.div_headerSearchBar img {
+  max-width: 17px;
+}
+
+.div_headerAboutUs ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-top: 60px;
+  list-style-type: none;
+}
+
+.div_headerAboutUs li {
+  margin-top: 15px;
+}
+
+.div_headerAboutUs a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.div_headerAboutUs a:hover {
+  transform: scale(1.1);
+}
+
+.div_headerAboutUs img {
+  max-width: 20px;
+}
+
+.div_headerAboutUs button {
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 30px;
+  border-style: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.div_headerAboutUs button:hover {
+  transform: scale(1.1);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div_main--margins {
+  margin: 20px;
+  background-color: #ffffff;
+}
+
+.div_mainAboutUs {
+  margin-top: 50px;
+  width: 1000px;
+  height: 100%;
+
+  background-color: #ffffff;
+  box-shadow: 0px 0px 1px grey;
+
+  margin-bottom: 60px;
+}
+
+.div_mainAboutUs h1 {
+  color: #31a9fd;
+}
+
+.div_mainAboutUs p {
+  text-align: justify;
+}
+
+hr {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+footer {
+  margin-left: 150px;
+  margin-right: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer img {
+  max-height: 150px;
+  filter: grayscale(100%);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Media Query para Tablets / Laptops Pequeñas (max-width: 1024px) */
+
+@media screen and (max-width: 1024px) {
+  nav,
+  footer,
+  hr {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .div_headerSearchBar input {
+    width: 300px;
+  }
+
+  .img_headerLogo {
+    height: 100px;
+    margin-top: 10px;
+    width: auto;
+  }
+
+  .div_mainAboutUs {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/*  Media Query para Móviles / Tablets Pequeñas (max-width: 768px) */
+
+@media screen and (max-width: 768px) {
+  header {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-height: none;
+  }
+
+  .img_headerLogo {
+    margin-top: 20px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .div_headerSearchBar {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .div_headerSearchBar input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .div_headerAboutUs ul {
+    margin-top: 20px;
+    padding-left: 0;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .div_mainAboutUs {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  hr {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    gap: 15px;
+    padding-bottom: 20px;
+  }
+}

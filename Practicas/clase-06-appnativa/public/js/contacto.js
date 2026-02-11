@@ -1,0 +1,46 @@
+const formulario = document.getElementById("contactForm");
+
+const nombre = document.getElementById("name");
+const email = document.getElementById("email");
+const celular = document.getElementById("cellphone");
+const mensaje = document.getElementById("message");
+
+function menu() {
+  window.location.href = "../index.html";
+}
+
+formulario.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+
+   const datos = {
+       nombre: nombre.value,
+       email: email.value,
+       celular: celular.value,
+       mensaje: mensaje.value
+   };
+
+    enviarDatosServidor(datos);
+
+    alert("Mensaje enviado correctamente");
+    formulario.reset();
+});
+
+const enviarDatosServidor = (data) => {
+    let url = "http://localhost:3000/contacto";
+
+    fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Respuesta del servidor:", data);
+    })
+    .catch(error => {
+        console.error("Error al enviar datos al servidor:", error);
+    });
+}
