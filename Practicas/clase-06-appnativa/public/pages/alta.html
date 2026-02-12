@@ -67,7 +67,7 @@
         <h2 class="headerFont">Registra los productos</h2>
         <p class="bodyFont">¡Carga los productos, consulta el stock y mas!</p>
 
-        <form class="bodyFont">
+        <form class="bodyFont" id="formularioProductos">
           <label for="nombreProducto">Nombre</label>
           <br />
           <input
@@ -93,9 +93,9 @@
           <br />
           <div style="display: flex; flex-direction: row">
             <label for="siOptionStock">Si</label>
-            <input type="radio" name="option" value="si" id="siOptionStock" />
+            <input type="radio" name="stock" value="si"/>
             <label for="noOptionStock">No</label>
-            <input type="radio" name="option" value="no" id="noOptionStock" />
+            <input type="radio" name="stock" value="no"/>
           </div>
           <br />
           <label for="marcaProducto">Marca</label>
@@ -139,9 +139,9 @@
           <br />
           <div style="display: flex; flex-direction: row">
             <label for="siOptionEnvio">Si</label>
-            <input type="radio" name="option" value="si" id="siOptionEnvio" />
+            <input type="radio" name="envio" value="si"/>
             <label for="noOptionEnvio">No</label>
-            <input type="radio" name="option" value="no" id="noOptionEnvio" />
+            <input type="radio" name="envio" value="no"/>
           </div>
           <br />
           <label for="edadDesdeProducto">Edad desde</label>
@@ -154,7 +154,7 @@
           <br />
           <label for="fotoProducto">Foto</label>
           <br />
-          <input type="file" required id="fotoProducto" />
+          <input type="file" id="fotoProducto" />
           <br />
           <button
             class="headerFont"
@@ -180,6 +180,6 @@
       <img src="../img/logoGameKeys.png" alt="Imagen logo Game Keys" />
     </footer>
 
-    <script src="../js/functions.js"></script>
+    <script src="../js/productos.js"></script>
   </body>
 </html>

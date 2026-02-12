@@ -12,35 +12,34 @@ function menu() {
 formulario.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  const datos = {
+    nombre: nombre.value,
+    email: email.value,
+    celular: celular.value,
+    mensaje: mensaje.value,
+  };
 
-   const datos = {
-       nombre: nombre.value,
-       email: email.value,
-       celular: celular.value,
-       mensaje: mensaje.value
-   };
+  enviarDatosServidor(datos);
 
-    enviarDatosServidor(datos);
-
-    alert("Mensaje enviado correctamente");
-    formulario.reset();
+  formulario.reset();
 });
 
 const enviarDatosServidor = (data) => {
-    let url = "http://localhost:3000/contacto";
+  let url = "http://localhost:3000/contacto";
 
-    fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Respuesta del servidor:", data);
+      alert(data.message);
     })
-    .then(response => response.json())
-    .then(data => {
-        console.log("Respuesta del servidor:", data);
-    })
-    .catch(error => {
-        console.error("Error al enviar datos al servidor:", error);
+    .catch((error) => {
+      console.error("Error al enviar datos al servidor:", error);
     });
-}
+};
