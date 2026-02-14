@@ -43,7 +43,7 @@ formularioProductos.addEventListener("submit", (event) => {
 });
 
 const enviarDatosServidor = (data) => {
-  let url = "http://localhost:3000/productos";
+  let url = "https://appnativa-gamekeys-production.up.railway.app/productos";
   
   fetch(url, {
     method: "POST",
