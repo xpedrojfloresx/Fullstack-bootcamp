@@ -1,0 +1,28 @@
+{
+  "name": "plantillas",
+  "version": "1.0.0",
+  "description": "Iniciamos un proyecto con motores de plantillas con handlebars",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Motores",
+    "de",
+    "Plantillas",
+    "Express",
+    "MongoDB"
+  ],
+  "author": "Pedro Flores",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.3",
+    "nodemon": "^3.1.11",
+    "path": "^0.12.7"
+  }
+}
