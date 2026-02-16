@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a class="brand" href="#home">
+          <span class="logo" aria-hidden="true"></span>
+          Mi Pagina
+        </a>
+
+        <nav aria-label="Main navigation">
+          <button
+            class="hamburger"
+            aria-expanded="false"
+            aria-controls="primary-menu"
+            title="Abrir menú"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M3 12h18M3 6h18M3 18h18"></path>
+            </svg>
+          </button>
+
+          <ul id="primary-menu" class="menu" role="menubar">
+            <li role="none"><a role="menuitem" href="/index">Home</a></li>
+            <li role="none"><a role="menuitem" href="/contact">Contact</a></li>
+            <li role="none">
+              <a role="menuitem" class="active" href="/about">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="containerAbout">
+      <section class="hero">
+        <h1>Sobre mí</h1>
+        <p>
+          Hola — soy desarrollador/a web y éste es un pequeño sitio de
+          demostración con navegación rápida y estilos consistentes.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>Qué hago</h2>
+        <p>
+          Me especializo en crear interfaces limpias y accesibles. Aquí tienes
+          un resumen rápido:
+        </p>
+
+        <ul>
+          <li>Desarrollo front-end (HTML, CSS, JavaScript)</li>
+          <li>Diseño responsive y accesibilidad</li>
+          <li>Prototipado rápido y optimización de rendimiento</li>
+        </ul>
+
+        <p>
+          Si quieres ver un ejemplo o hablar de un proyecto, utiliza la sección
+          de contacto.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Pedro Flores</p>
+      </div>
+    </footer>
+
+    <script>
+      // pequeño script para el menú y para poner el año actual en el pie
+      (function () {
+        const btn = document.querySelector(".hamburger");
+        const menu = document.getElementById("primary-menu");
+        btn &&
+          btn.addEventListener("click", () => {
+            const showing = menu.classList.toggle("show");
+            btn.setAttribute("aria-expanded", showing ? "true" : "false");
+          });
+
+        // rellenar año en el footer
+        const yearEl = document.getElementById("year");
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+      })();
+    </script>
+  </body>
+</html>

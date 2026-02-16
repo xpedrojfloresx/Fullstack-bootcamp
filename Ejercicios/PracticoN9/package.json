@@ -1,0 +1,19 @@
+{
+  "name": "practicon9",
+  "version": "1.0.0",
+  "description": "Trabajo Practico N°9",
+  "license": "ISC",
+  "author": "Pedro Flores",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11",
+    "path": "^0.12.7"
+  }
+}
