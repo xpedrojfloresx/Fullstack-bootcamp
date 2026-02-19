@@ -1,0 +1,33 @@
+    <div class="container my-4">
+        <h2 class="mb-4">Artículos recientes</h2>
+
+        {{#if items}}
+            <div class="row g-3">
+                {{#each items}}
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">{{title}}</h5>
+
+                                {{#if price}}
+                                    <p class="card-text mb-2">
+                                        <span class="badge bg-success">${{price}}</span>
+                                    </p>
+                                {{/if}}
+
+                                {{#if description}}
+                                    <p class="card-text text-muted flex-grow-1">{{description}}</p>
+                                {{/if}}
+
+                                <a href="/items/{{id}}" class="btn btn-primary mt-3 align-self-start">Ver detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        {{else}}
+            <div class="alert alert-info" role="alert">
+                No hay artículos para mostrar.
+            </div>
+        {{/if}}
+    </div>
