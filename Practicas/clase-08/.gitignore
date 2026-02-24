@@ -1,0 +1,69 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Environment files
+.env
+.env.*.local
+.env.local
+.env.test
+secrets.env
+secret*.key
+
+# Build output
+dist/
+build/
+out/
+*.tgz
+
+# Coverage
+coverage/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Caches
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vite/
+.cache-loader/
+
+# Yarn v2/v3
+.yarn/*
+!.yarn/releases/
+!.yarn/plugins/
+!.yarn/patches/
+.pnp.*
+.yarnrc.yml
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temp
+tmp/
+temp/
+
+# Docker-compose local overrides
+docker-compose.override.yml
+
+# Misc
+coverage-final.json

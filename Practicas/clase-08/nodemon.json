@@ -1,0 +1,14 @@
+{
+    "watch": ["src", "config", "routes", "package.json"],
+    "ext": "js,json,ts,hbs",
+    "ignore": ["node_modules", "dist", "build", ".git"],
+    "execMap": { "js": "node" },
+    "env": {
+        "NODE_ENV": "development",
+        "PORT": "3000"
+    },
+    "delay": "1000",
+    "restartable": "rs",
+    "runOnChangeOnly": false,
+    "legacyWatch": false
+}

@@ -1,0 +1,179 @@
+
+{{>barraNavegacion}}
+
+<body class="bg-white text-dark">
+  <main class="container py-5">
+    <!-- Hero / Bienvenida -->
+    <section class="hero p-4 p-md-5 mb-5">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <h1 class="hero-title display-5">Bienvenido a {{siteName}}</h1>
+          <p class="lead text-muted">Encuentra productos seleccionados, ofertas
+            exclusivas y envío rápido. Compra fácil y seguro.</p>
+          <div class="mt-4">
+            <a href="/shop" class="btn btn-primary btn-lg me-2">Ir a la tienda</a>
+            <a href="/ofertas" class="btn btn-outline-secondary btn-lg">Ver
+              ofertas</a>
+          </div>
+        </div>
+        <div class="col-md-5 d-none d-md-block">
+          <img
+            src="https://picsum.photos/500"
+            alt="Imagen principal"
+            class="img-fluid rounded"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de destacados -->
+    <section class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h4 mb-0">Productos destacados</h2>
+        <a href="/shop" class="text-decoration-none">Ver todo &rarr;</a>
+      </div>
+
+      <div class="row g-3">
+        {{#if featured}}
+          {{#each featured}}
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card h-100 position-relative">
+                {{#if this.discount}}
+                  <span
+                    class="badge badge-discount text-white px-2 py-1"
+                  >{{this.discount}}% OFF</span>
+                {{/if}}
+                <img
+                  src="{{this.image}}"
+                  class="card-img-top"
+                  alt="{{this.name}}"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title mb-1">{{this.name}}</h5>
+                  <p class="text-muted small mb-2">{{this.category}}</p>
+                  <div class="mt-auto">
+                    {{#if this.oldPrice}}
+                      <div class="mb-2">
+                        <span class="fw-bold h6">{{this.price}}</span>
+                        <small
+                          class="text-muted text-decoration-line-through ms-2"
+                        >{{this.oldPrice}}</small>
+                      </div>
+                    {{else}}
+                      <div class="mb-2">
+                        <span class="fw-bold h6">{{this.price}}</span>
+                      </div>
+                    {{/if}}
+                    <a
+                      href="/product/{{this.id}}"
+                      class="btn btn-sm btn-outline-primary w-100"
+                    >Ver producto</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        {{else}}
+          <!-- Muestras estáticas si no se envían productos -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img
+                src="https://via.placeholder.com/400x300?text=Producto+1"
+                class="card-img-top"
+                alt="Producto 1"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-1">Producto ejemplo 1</h5>
+                <p class="text-muted small mb-2">Categoría</p>
+                <div class="mt-auto">
+                  <div class="mb-2"><span class="fw-bold h6">$29.99</span></div>
+                  <a href="#" class="btn btn-sm btn-outline-primary w-100">Ver
+                    producto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img
+                src="https://via.placeholder.com/400x300?text=Producto+2"
+                class="card-img-top"
+                alt="Producto 2"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-1">Producto ejemplo 2</h5>
+                <p class="text-muted small mb-2">Categoría</p>
+                <div class="mt-auto">
+                  <div class="mb-2"><span class="fw-bold h6">$49.99</span></div>
+                  <a href="#" class="btn btn-sm btn-outline-primary w-100">Ver
+                    producto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img
+                src="https://via.placeholder.com/400x300?text=Producto+3"
+                class="card-img-top"
+                alt="Producto 3"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-1">Producto ejemplo 3</h5>
+                <p class="text-muted small mb-2">Categoría</p>
+                <div class="mt-auto">
+                  <div class="mb-2"><span class="fw-bold h6">$79.99</span></div>
+                  <a href="#" class="btn btn-sm btn-outline-primary w-100">Ver
+                    producto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img
+                src="https://via.placeholder.com/400x300?text=Producto+4"
+                class="card-img-top"
+                alt="Producto 4"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-1">Producto ejemplo 4</h5>
+                <p class="text-muted small mb-2">Categoría</p>
+                <div class="mt-auto">
+                  <div class="mb-2"><span class="fw-bold h6">$19.99</span></div>
+                  <a href="#" class="btn btn-sm btn-outline-primary w-100">Ver
+                    producto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{/if}}
+      </div>
+    </section>
+
+    <!-- Sección de beneficios -->
+    <section class="py-4 bg-light rounded">
+      <div class="row text-center">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+          <h5 class="mb-1">Envío rápido</h5>
+          <p class="text-muted small mb-0">Procesamos y enviamos tu pedido en 24
+            horas.</p>
+        </div>
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+          <h5 class="mb-1">Pago seguro</h5>
+          <p class="text-muted small mb-0">Diversas formas de pago y protección
+            en cada compra.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h5 class="mb-1">Soporte 24/7</h5>
+          <p class="text-muted small mb-0">Atención al cliente disponible todos
+            los días.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+
+{{>footer-alt}}

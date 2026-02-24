@@ -1,0 +1,65 @@
+<footer class="site-footer" role="contentinfo" aria-label="Pie de página">
+    <div class="container footer-top">
+        <div class="footer-brand">
+            {{#if logoUrl}}
+                <img src="{{logoUrl}}" alt="{{companyName}} logo" class="footer-logo">
+            {{else}}
+                <span class="footer-logo-text">{{companyName}}</span>
+            {{/if}}
+            <p class="footer-tagline">{{tagline}}</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Enlaces del pie de página">
+            {{#each footerNavs}}
+                <div class="footer-column">
+                    <h4 class="footer-column-title">{{this.title}}</h4>
+                    <ul class="footer-list">
+                        {{#each this.links}}
+                            <li><a href="{{this.href}}" {{#if this.target}}target="{{this.target}}"{{/if}}>{{this.text}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+            {{/each}}
+        </nav>
+
+        <div class="footer-newsletter">
+            <h4>{{newsletter.title}}</h4>
+            <p class="muted">{{newsletter.description}}</p>
+            <form action="{{newsletter.action}}" method="post" class="newsletter-form" novalidate>
+                <label for="footer-email" class="sr-only">Correo electrónico</label>
+                <input id="footer-email" name="email" type="email" placeholder="{{newsletter.placeholder}}" required>
+                <button type="submit">{{newsletter.buttonText}}</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container footer-bottom">
+        <div class="footer-payments" aria-hidden="false">
+            {{#if payments}}
+                <ul class="payments-list">
+                    {{#each payments}}
+                        <li class="payment-item"><img src="{{this.icon}}" alt="{{this.name}}"></li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+        </div>
+
+        <div class="footer-meta">
+            <p class="copyright">© {{year}} {{companyName}}. {{copyright}}</p>
+            <ul class="meta-links">
+                {{#each metaLinks}}
+                    <li><a href="{{this.href}}">{{this.text}}</a></li>
+                {{/each}}
+            </ul>
+
+            <div class="footer-social" aria-label="Redes sociales">
+                {{#each social}}
+                    <a href="{{this.href}}" class="social-link" aria-label="{{this.name}}" rel="noopener" target="_blank">
+                        <span class="sr-only">{{this.name}}</span>
+                        <i class="icon-{{this.icon}}"></i>
+                    </a>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</footer>
