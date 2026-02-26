@@ -1,0 +1,9 @@
+/* Efectos de hover para las tarjetas de categorías en la página de inicio  */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2) !important;
+}

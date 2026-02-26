@@ -1,0 +1,115 @@
+{{!-- /E:/Fullstack-bootcamp/Integradores/IntegradorN°2/src/views/users.hbs --}}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h1 class="h3 mb-0">Usuarios registrados</h1>
+            <small class="text-muted">Listado de usuarios del sistema</small>
+        </div>
+        <div class="d-flex gap-2">
+            <a href="/users/new" class="btn btn-primary">
+                <i class="bi bi-person-plus"></i> Agregar usuario
+            </a>
+        </div>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                        <input id="searchInput" type="search" class="form-control" placeholder="Buscar por nombre, email o rol">
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table id="usersTable" class="table table-hover align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Usuario</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Rol</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col" class="text-end">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#if users.length}}
+                            {{#each users}}
+                                <tr>
+                                    <td>{{this.id}}</td>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="{{this.avatar}}" alt="{{this.name}}" class="rounded-circle avatar-sm" onerror="this.src='/images/default-avatar.png'">
+                                            <div>
+                                                <div class="fw-semibold">{{this.name}}</div>
+                                                <div class="text-muted small">{{this.username}}</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-break">{{this.email}}</td>
+                                    <td>
+                                        {{#if this.role}}
+                                            <span class="badge bg-secondary">{{this.role}}</span>
+                                        {{else}}
+                                            <span class="badge bg-light text-muted">—</span>
+                                        {{/if}}
+                                    </td>
+                                    <td>
+                                        {{#if this.active}}
+                                            <span class="badge bg-success">Activo</span>
+                                        {{else}}
+                                            <span class="badge bg-secondary">Inactivo</span>
+                                        {{/if}}
+                                    </td>
+                                    <td class="text-end">
+                                        <a href="/users/{{this.id}}/edit" class="btn btn-sm btn-outline-primary me-1">
+                                            <i class="bi bi-pencil"></i> Editar
+                                        </a>
+                                        <form action="/users/{{this.id}}?_method=DELETE" method="post" class="d-inline" onsubmit="return confirm('¿Eliminar usuario {{this.name}}?');">
+                                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-trash"></i> Eliminar
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            {{/each}}
+                        {{else}}
+                            <tr>
+                                <td colspan="6" class="text-center text-muted py-4">No hay usuarios registrados.</td>
+                            </tr>
+                        {{/if}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .avatar-sm { width:48px; height:48px; object-fit:cover; }
+</style>
+
+<script>
+    (function () {
+        const input = document.getElementById('searchInput');
+        const table = document.getElementById('usersTable');
+        const tbody = table && table.tBodies[0];
+        if (!input || !tbody) return;
+
+        input.addEventListener('input', function () {
+            const q = this.value.trim().toLowerCase();
+            const rows = Array.from(tbody.rows);
+            if (!q) {
+                rows.forEach(r => r.style.display = '');
+                return;
+            }
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(q) ? '' : 'none';
+            });
+        });
+    })();
+</script>

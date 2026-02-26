@@ -1,6 +1,12 @@
+// Importaciones
 const express = require('express');
 const path = require('path');
 const {engine} = require('express-handlebars');
+const morgan = require('morgan');
+
+// Rutas
+const { pagesStatus, notFound, serverError } = require('./src/routes/pagesStatus');
+const pagesRoutes = require('./src/routes/pagesRoutes');
 
 const app = express();
 
@@ -15,23 +21,26 @@ app.engine("hbs", engine({
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "src/views"));
 
-//Configuracion Bootstrap
-app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
-app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
+//Middleware
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(morgan('dev'));
 
 app.use(express.json());
 
-app.get("/home", (req, res) => {
+// Rutas
+app.use(pagesStatus);
+
+app.use(pagesRoutes);
+
+app.get("/", (req, res) => {
     res.render("home");
 });
 
-app.use((req, res) => {
-    res.status(404).send("<h1>404</h1>");
-});
+// Manejo de errores
+app.use(notFound);
 
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send("<h1>500</h1>");
-});
+app.use(serverError);
 
+// Export de app
 module.exports = app;
