@@ -1,8 +1,8 @@
 const { Router } = require("express");
 
-const pagesStatus = Router();
+const status = Router();
 
-pagesStatus.get("/health", (req, res) => {
+status.get("/health", (req, res) => {
     res.status(200).render("200", {layout: "svStatus"});
 });
 
@@ -15,4 +15,4 @@ const serverError = (err, req, res, next) => {
     res.status(500).render("500", { layout: "svStatus" });
 };
 
-module.exports = { pagesStatus, notFound, serverError };
+module.exports = { status, notFound, serverError };
