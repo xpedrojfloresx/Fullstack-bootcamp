@@ -5,11 +5,17 @@ dotenv.config();
 
 const dbPassword = process.env.MONGO_PASSWORD;
 
-const uri = `mongodb+srv://pedrojflores:${dbPassword}@cluster0.171yqpp.mongodb.net/?appName=Cluster0`;
+const uri = `mongodb+srv://pedrojflores:${dbPassword}@cluster0.171yqpp.mongodb.net/ecommerce?appName=Cluster0`;
 
-const clientOptions = {serverApi: {version: '1', strict: true, deprecationErrors: true}};
+const clientOptions = {
+    serverApi: 
+    {   version: '1', 
+        strict: true, 
+        deprecationErrors: true
+    }
+};
 
-const connectDB = async () => {
+async function connectDB() {
     try {
         await mongoose.connect(uri, clientOptions);
         await mongoose.connection.db.admin().command({ ping: 1 });
