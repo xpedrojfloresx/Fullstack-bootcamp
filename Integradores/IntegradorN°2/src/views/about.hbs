@@ -31,106 +31,76 @@
 </section>
 
 <!-- Features -->
-<!-- Hero -->
-<section class="hero rounded-3 my-5">
-  <div class="container py-4">
-    <div class="row align-items-center">
-      <div class="col-md-7">
-        <h1 class="display-5 fw-bold"> Sobre nosotros</h1>
-        <p class="lead text-muted">
-            Conoce quiénes somos y qué hacemos
-          </p>
-        <p class="mb-4">
-            Somos un equipo apasionado que crea soluciones web modernas, accesibles y escalables.
-          </p>
-        <a href="/contact" class="btn btn-primary btn-lg">Contáctanos</a>
-        <a href="#equipo" class="btn btn-outline-secondary btn-lg ms-2">Ver
-          equipo</a>
-      </div>
-      <div class="col-md-5 text-center d-none d-md-block">
-        <img
-          src="{{heroImage '/assets/img/about-illustration.svg'}}"
-          alt="Sobre nosotros"
-          class="img-fluid"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Features -->
 <section class="my-5">
   <h2 class="h3 mb-3">Qué ofrecemos</h2>
   <div class="row g-3">
-    {{#each features}}
-      <div class="col-sm-6 col-lg-3">
-        <div class="card h-100 border-0 shadow-sm">
-          <div class="card-body">
-            <div class="d-flex align-items-start">
-              <div class="me-3 feature-icon text-primary">
-                {{{icon}}}
-              </div>
-              <div>
-                <h5 class="card-title mb-1">Overflow</h5>
-                <p class="card-text text-muted small">{{text}}</p>
-              </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <div class="d-flex align-items-start">
+            <div
+              class="me-3 feature-icon text-primary"
+              aria-hidden="true"
+            >📦</div>
+            <div>
+              <h5 class="card-title mb-1">Envíos rápidos</h5>
+              <p class="card-text text-muted small">Entregas en 24-48 horas en
+                la mayoría de los pedidos.</p>
             </div>
           </div>
         </div>
       </div>
-    {{/each}}
-  </div>
-</section>
-
-<!-- Team -->
-<section id="equipo" class="my-5">
-  <h2 class="h3 mb-3">Nuestro equipo</h2>
-  <div class="row">
-    {{#if team}}
-      {{#each team}}
-        <div class="col-sm-6 col-md-4">
-          <div class="card mb-4 shadow-sm h-100">
-            {{#if photo}}
-              <img
-                src="{{photo}}"
-                class="card-img-top team-photo"
-                alt="{{name}}"
-              />
-            {{/if}}
-            <div class="card-body">
-              <h5 class="card-title mb-1">{{name}}</h5>
-              <p class="text-muted small mb-2">{{role}}</p>
-              <p class="card-text small">{{bio}}</p>
-            </div>
-            <div class="card-footer bg-white d-flex justify-content-between">
-              <div>
-                {{#if social.twitter}}<a
-                    href="{{social.twitter}}"
-                    target="_blank"
-                    class="me-2 text-decoration-none"
-                  >Twitter</a>{{/if}}
-                {{#if social.linkedin}}<a
-                    href="{{social.linkedin}}"
-                    target="_blank"
-                    class="me-2 text-decoration-none"
-                  >LinkedIn</a>{{/if}}
-              </div>
-              <small class="text-muted">{{location}}</small>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <div class="d-flex align-items-start">
+            <div
+              class="me-3 feature-icon text-primary"
+              aria-hidden="true"
+            >🔒</div>
+            <div>
+              <h5 class="card-title mb-1">Pago seguro</h5>
+              <p class="card-text text-muted small">Transacciones seguras con
+                múltiples métodos de pago.</p>
             </div>
           </div>
         </div>
-      {{/each}}
-    {{else}}
-      <div class="col-12">
-        <div class="alert alert-info">Actualmente no hay miembros en el equipo.</div>
       </div>
-    {{/if}}
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <div class="d-flex align-items-start">
+            <div
+              class="me-3 feature-icon text-primary"
+              aria-hidden="true"
+            >💬</div>
+            <div>
+              <h5 class="card-title mb-1">Soporte 24/7</h5>
+              <p class="card-text text-muted small">Atención al cliente rápida y
+                efectiva.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <div class="d-flex align-items-start">
+            <div
+              class="me-3 feature-icon text-primary"
+              aria-hidden="true"
+            >🔧</div>
+            <div>
+              <h5 class="card-title mb-1">Soluciones a medida</h5>
+              <p class="card-text text-muted small">Productos y servicios
+                diseñados según tus necesidades.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
-
-<!-- CTA -->
-<section class="my-5 p-4 rounded-3 bg-light text-center">
-  <h3 class="mb-2">¿Listo para empezar?</h3>
-  <p class="text-muted mb-3">Hablemos y construyamos algo increíble juntos.</p>
-  <a href="/contact" class="btn btn-primary btn-lg">Solicitar reunión</a>
 </section>
