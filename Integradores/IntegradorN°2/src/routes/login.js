@@ -19,12 +19,13 @@ router.post("/login", (req, res) => {
     };
 
     req.session.save(() => {
-      res.redirect("/");
+      return res.redirect("/");
     });
   }
-
-  // Si falla
-  res.render("login", { layout: "auth", error: "Credenciales incorrectas" });
+  else{
+    // Si falla
+    return res.render("login", { layout: "auth", error: "Credenciales inválidas" });
+  }
 });
 
 // Logout

@@ -10,7 +10,20 @@
     </div>
     <div class="card shadow-sm">
       <div class="card-body p-4">
-        <form action="/api/usuarios/register" method="POST" novalidate>
+
+        {{#if success}}
+          <div class="alert alert-success" role="alert">
+            {{success}}
+          </div>
+        {{/if}}
+
+         {{#if error}}
+            <div class="alert alert-danger" role="alert">
+              {{error}}
+            </div>
+    {{/if}}
+        
+    <form action="/api/usuarios/register" method="POST" id="register-form" novalidate>
           <div class="mb-3">
             <label for="name" class="form-label">Nombre completo</label>
             <input
@@ -74,3 +87,4 @@
     </div>
   </div>
 </div>
+

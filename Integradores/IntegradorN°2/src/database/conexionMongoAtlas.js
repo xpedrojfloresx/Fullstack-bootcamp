@@ -19,9 +19,9 @@ async function connectDB() {
     try {
         await mongoose.connect(uri, clientOptions);
         await mongoose.connection.db.admin().command({ ping: 1 });
-        console.log('Base de datos conectada');
+        console.log('Base de datos conectada - MongoDB Atlas');
     } catch (error) {
-        console.error('Error al conectar a la base de datos:', error);
+        console.error('Error al conectar a la base de datos - MongoDB Atlas:', error);
         process.exit(1);
     }
 };

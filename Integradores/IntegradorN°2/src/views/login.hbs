@@ -3,6 +3,13 @@
 >
   <div class="card shadow-sm w-100" style="max-width: 420px;">
     <div class="card-body p-4">
+
+      {{#if error}}
+        <div class="alert alert-danger" role="alert">
+          {{error}}
+        </div>
+      {{/if}}
+
       <h3 class="card-title mb-3 text-center">Iniciar sesión</h3>
       <form method="POST" action="/login" novalidate>
         <div class="mb-3">

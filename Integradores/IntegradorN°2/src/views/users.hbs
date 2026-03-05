@@ -5,91 +5,68 @@
             <h1 class="h3 mb-0">Usuarios registrados</h1>
             <small class="text-muted">Listado de usuarios del sistema</small>
         </div>
+        {{#if success}}
+        <div class="alert alert-success" role="alert">
+            {{success}}
+        </div>
+        <script>
+            const form = document.getElementById('usersAddForm');
+            if (form) form.reset();
+        </script>
+        {{/if}}
+        {{#if error}}
+        <div class="alert alert-danger" role="alert">
+            {{error}}
+        </div>
+        <script>
+            const form = document.getElementById('usersAddForm');
+            if (form) form.reset();
+        </script>
+        {{/if}}
         <div class="d-flex gap-2">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal"
-            >
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">
                 <i class="bi bi-person-plus"></i> Agregar usuario
             </button>
         </div>
     </div>
 
     <div class="modal fade" id="addUserModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
 
-        <div class="modal-header">
-          <h5 class="modal-title">Agregar Usuario</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-          ></button>
+                <div class="modal-body">
+                    <form id="usersAddForm" action="/api/usuarios/add" method="POST" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="userName" name="name" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">E-mail</label>
+                            <input type="text" class="form-control" id="userEmail" name="email" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="userPassword" name="password" required />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Cancelar
+                            </button>
+                            <button type="submit" class="btn btn-primary" id="saveProductBtn" >
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <div class="modal-body">
-          <form
-            id="productForm"
-            action="/api/usuarios/add"
-            method="POST"
-            novalidate
-          >
-
-            <div class="mb-3">
-              <label class="form-label">ID</label>
-              <input
-                type="number"
-                class="form-control"
-                name="id"
-                id="productId"
-                required
-              />
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label">Nombre</label>
-              <input
-                type="text"
-                class="form-control"
-                id="userName"
-                name="name"
-                required
-              />
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label">E-mail</label>
-              <input
-                type="text"
-                class="form-control"
-                id="userEmail"
-                name="email"
-                required
-              />
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label">Contraseña</label>
-              <input
-                type="password"
-                class="form-control"
-                id="userPassword"
-                name="password"
-                required
-              />
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                Cancelar
-              </button>
-              <button type="submit" class="btn btn-primary" id="saveProductBtn" >
-                Guardar
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
     </div>
-  </div>
 
 
     <div class="card shadow-sm">
@@ -98,7 +75,8 @@
                 <div class="col-md-6">
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-search"></i></span>
-                        <input id="searchInput" type="search" class="form-control" placeholder="Buscar por nombre, email o rol">
+                        <input id="searchInput" type="search" class="form-control"
+                            placeholder="Buscar por nombre, email o rol">
                     </div>
                 </div>
             </div>
@@ -115,49 +93,48 @@
                     </thead>
                     <tbody>
                         {{#if users.length}}
-                            {{#each users}}
-                                <tr>
-                                    <td>{{this.id}}</td>
-                                    <td>
-                                        <div class="d-flex align-items-center gap-3">
-                                            <img src="{{this.avatar}}" alt="{{this.name}}" class="rounded-circle avatar-sm" onerror="this.src='/images/default-avatar.png'">
-                                            <div>
-                                                <div class="fw-semibold">{{this.name}}</div>
-                                                <div class="text-muted small">{{this.username}}</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="text-break">{{this.email}}</td>
-                                    <td>
-                                        {{#if this.role}}
-                                            <span class="badge bg-secondary">{{this.role}}</span>
-                                        {{else}}
-                                            <span class="badge bg-light text-muted">—</span>
-                                        {{/if}}
-                                    </td>
-                                    <td>
-                                        {{#if this.active}}
-                                            <span class="badge bg-success">Activo</span>
-                                        {{else}}
-                                            <span class="badge bg-secondary">Inactivo</span>
-                                        {{/if}}
-                                    </td>
-                                    <td class="text-end">
-                                        <a href="/users/{{this.id}}/edit" class="btn btn-sm btn-outline-primary me-1">
-                                            <i class="bi bi-pencil"></i> Editar
-                                        </a>
-                                        <form action="/users/{{this.id}}?_method=DELETE" method="post" class="d-inline" onsubmit="return confirm('¿Eliminar usuario {{this.name}}?');">
-                                            <button type="submit" class="btn btn-sm btn-outline-danger">
-                                                <i class="bi bi-trash"></i> Eliminar
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            {{/each}}
+                        {{#each users}}
+                        <tr>
+                            <td>{{this.userId}}</td>
+                            <td>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div>
+                                        <div class="fw-semibold">{{this.name}}</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-break">{{this.email}}</td>
+                            <td>
+                                {{#if this.role}}
+                                <span class="badge bg-secondary">{{this.role}}</span>
+                                {{else}}
+                                <span class="badge bg-light text-muted">—</span>
+                                {{/if}}
+                            </td>
+                            <td>
+                                {{#if this.active}}
+                                <span class="badge bg-success">Activo</span>
+                                {{else}}
+                                <span class="badge bg-secondary">Inactivo</span>
+                                {{/if}}
+                            </td>
+                            <td class="text-end">
+                                <a href="/users/{{this.userId}}/edit" class="btn btn-sm btn-outline-primary me-1">
+                                    <i class="bi bi-pencil"></i> Editar
+                                </a>
+                                <form action="/users/{{this.userId}}?_method=DELETE" method="post" class="d-inline"
+                                    onsubmit="return confirm('¿Eliminar usuario {{this.name}}?');">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">
+                                        <i class="bi bi-trash"></i> Eliminar
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        {{/each}}
                         {{else}}
-                            <tr>
-                                <td colspan="6" class="text-center text-muted py-4">No hay usuarios registrados.</td>
-                            </tr>
+                        <tr>
+                            <td colspan="6" class="text-center text-muted py-4">No hay usuarios registrados.</td>
+                        </tr>
                         {{/if}}
                     </tbody>
                 </table>
@@ -167,7 +144,11 @@
 </div>
 
 <style>
-    .avatar-sm { width:48px; height:48px; object-fit:cover; }
+    .avatar-sm {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+    }
 </style>
 
 <script>
@@ -191,3 +172,5 @@
         });
     })();
 </script>
+
+<!-- original client-side behavior left unchanged -->

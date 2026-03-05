@@ -27,6 +27,12 @@ app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "src/views"));
 
 //Middleware
+// Antes de todas las rutas
+app.use((req, res, next) => {
+    console.log(`➡️ ${req.method} ${req.url}`);
+    next();
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Sirve para registrar las solicitudes HTTP en la consola
