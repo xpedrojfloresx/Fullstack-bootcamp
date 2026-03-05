@@ -1,42 +1,57 @@
 const { Router } = require("express");
-
 const router = Router();
 
-//Ruta para mostrar el formulario de registro
-router.get("/", (req, res) => {
-    res.render("products", { layout: "main" });
+const Producto = require("../models/modelsProducts");
+
+// GET /api/productos
+router.get("/productos", async (req, res) => {
+  try {
+    const productos = await Producto.find().sort({ productId: 1 }).lean();
+
+    return res.render("products", {
+      layout: "main",
+      productos,
+      success: req.query.success,
+      error: req.query.error
+    });
+  } catch (error) {
+    console.log("❌ Error cargando productos:", error);
+    return res.render("products", {
+      layout: "main",
+      productos: [],
+      error: "No se pudieron cargar los productos"
+    });
+  }
 });
 
-//Ruta para manejar el registro de productos
-router.post("/", (req, res) => {
+// POST /api/productos   (porque el router está montado en app.use('/api', products))
+router.post("/productos", async (req, res) => {
+  console.log("1️⃣ Entró al POST /api/productos");
+  console.log("📩 Body:", req.body);
 
-    const ahora = new Date();
-
-    //1. Recibir los datos del formulario
-    const id = req.body.id;
-    const name = req.body.name;
-    const category = req.body.category;
-    const price = req.body.price;
-    const fechaRegistro = ahora.toLocaleDateString('es-AR', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit'
+  try {
+    const newProduct = new Producto({
+      // 👇 estos nombres coinciden con tu HBS y tu schema
+      nombre: req.body.nombre,
+      categoria: req.body.categoria,
+      precio: req.body.precio
     });
 
-    const producto = {
-        fechaRegistro,
-        id,
-        name,
-        category,
-        price
-    };
+    await newProduct.save();
 
-    res.json({
-        message: "Registro de producto recibido",
-        producto
-    });
+    console.log("✅ Producto guardado:", newProduct.productId, newProduct.nombre);
+
+    // 👇 OJO: tu GET está en /api/productos, no en /productos
+    return res.redirect("/api/productos?success=" + encodeURIComponent("Producto registrado exitosamente"));
+  } catch (error) {
+    console.log("❌ Error:", error.code, error.message);
+
+    if (error.code === 11000) {
+      return res.redirect("/api/productos?error=" + encodeURIComponent("Producto duplicado (campo único)"));
+    }
+
+    return res.redirect("/api/productos?error=" + encodeURIComponent("Error al registrar producto"));
+  }
 });
 
 module.exports = router;

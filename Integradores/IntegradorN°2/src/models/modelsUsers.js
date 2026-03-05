@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Counter = require('./counterSchema');
 
 const usuarioCollection = new mongoose.Schema({
     fechaRegistro: {
@@ -34,15 +35,17 @@ const usuarioCollection = new mongoose.Schema({
 });
 
 
-usuarioCollection.pre('save', function (next) {
-    if (!this.isNew) return next();
+usuarioCollection.pre('save', async function() {
+  if (!this.isNew) return;
 
-    this.constructor.findOne().sort({ userId: -1 })
-        .then(ultimo => {
-            this.userId = ultimo ? ultimo.userId + 1 : 1;
-            next();
-        })
-        .catch(err => next(err));
+  const counter = await Counter.findOneAndUpdate(
+    { name: 'userId' },
+    { $inc: { seq: 1 } },
+    { upsert: true, returnDocument: 'after' }
+  );
+
+  this.userId = counter.seq;
 });
 
 module.exports = mongoose.model('Usuario', usuarioCollection);
+

@@ -8,25 +8,22 @@ router.get("/about", (req, res) => {
     res.render("about");
 });
 
-router.get("/users", (req, res) => {
-    async function getUsers() {
-        try {
-            const usuarios = await usuarioCollection.find();
-            res.render("users", {
-                layout: "main",
-                users: usuarios,
-                success: req.query.success,
-                error: req.query.error,
-            });
-        } catch (error) {
-            res.render("users", {
-                layout: "main",
-                error: "Error al cargar usuarios",
-            });
-        }
-    }
+router.get("/users", async (req, res) => {
+  try {
+    const usuarios = await usuarioCollection
+      .find()
+      .sort({ userId: 1 })
+      .lean(); 
 
-    getUsers();
+    return res.render("users", {
+      usuarios,
+      success: req.query.success,
+      error: req.query.error
+    });
+  } catch (e) {
+    console.log(e);
+    return res.render("users", { usuarios: [], error: "No se pudieron cargar los usuarios" });
+  }
 });
 
 router.get("/products", (req, res) => {

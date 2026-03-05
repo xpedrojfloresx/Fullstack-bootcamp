@@ -1,41 +1,49 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const Counter = require("./counterSchema"); 
 
-const productoCollection = new mongoose.Schema({
-    fechaRegistro: {
-        type: Date,
-        default: Date.now
-    },
-    productId: {
-        type: Number,
-        unique: true,
-    },
-    nombre: {
-        type: String,
-        required: true,
-        lowercase: true,
-        min: 3,
-        max: 20
-    },
-    categoria: {
-        type: String,
-        required: true,
-        unique: true,
-        lowercase: true,
-        min: 6,
-        max: 50
-    },
-    precio: {
-        type: Number,
-        required: true,
-        min: 0
-    }
+const productoSchema = new mongoose.Schema({
+  fechaRegistro: {
+    type: String,
+  },
+  productId: {
+    type: Number,
+    unique: true,
+    index: true
+  },
+  nombre: {
+    type: String,
+    required: true,
+    lowercase: true,
+    trim: true,
+    minlength: 3,
+    maxlength: 50
+  },
+  categoria: {
+    type: String,
+    required: true,
+    lowercase: true,
+    trim: true,
+    minlength: 2,
+    maxlength: 50
+  },
+  precio: {
+    type: Number,
+    required: true,
+    min: 0
+  }
 });
 
-productoCollection.pre('save', async function() {
-    if (this.isNew) {
-        const ultimo = await this.constructor.findOne().sort({ productId: -1 });
-        this.productId = ultimo ? ultimo.productId + 1 : 1;
-    }
+// Autoincrement seguro
+productoSchema.pre("save", async function () {
+  if (!this.isNew) return;
+
+  const counter = await Counter.findOneAndUpdate(
+    { name: "productId" },
+    { $inc: { seq: 1 } },
+    { upsert: true, returnDocument: "after" }
+  );
+
+  this.productId = counter.seq;
 });
 
-module.exports = mongoose.model('Producto', productoCollection);
+module.exports = mongoose.model("Producto", productoSchema);

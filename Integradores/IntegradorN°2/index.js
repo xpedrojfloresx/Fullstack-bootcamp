@@ -58,7 +58,7 @@ app.use(routes);
 
 app.use('/api/usuarios', usersRegister);
 
-app.use('/api/productos', products);
+app.use('/api', products);
 
 app.use('/api', contact);
 
