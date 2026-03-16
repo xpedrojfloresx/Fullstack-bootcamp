@@ -26,8 +26,4 @@ router.get("/users", async (req, res) => {
   }
 });
 
-router.get("/products", (req, res) => {
-    res.render("products");
-});
-
 module.exports = router;

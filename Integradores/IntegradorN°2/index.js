@@ -12,6 +12,7 @@ const usersRegister = require('./src/routes/register');
 const products = require('./src/routes/products');
 const login = require('./src/routes/login');
 const contact = require('./src/routes/contact');
+const cart = require('./src/routes/sendCart');
 
 const app = express();
 
@@ -54,15 +55,17 @@ app.use(session({
 // Rutas
 app.use(status);
 
-app.use(routes);
+app.use(login);
 
 app.use('/api/usuarios', usersRegister);
+
+app.use(routes);
 
 app.use('/api', products);
 
 app.use('/api', contact);
 
-app.use(login);
+app.use('/api', cart);
 
 // Middleware de autenticación
 function isAuthenticated(req, res, next) {
