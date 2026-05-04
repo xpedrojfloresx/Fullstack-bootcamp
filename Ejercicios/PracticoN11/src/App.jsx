@@ -9,25 +9,45 @@ function App() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const [newTaskName, setNewTaskName] = useState('');
+  const [newTaskPriority, setNewTaskPriority] = useState('');
+  const [newTaskCompleted, setNewTaskCompleted] = useState(false);
+
 
   const handleAddTask = () => {
-    if (newTaskName.trim() === '') {
+    if (newTaskName.trim() === '' || newTaskPriority.trim() === '') {
       return;
     }
 
     const newTask = {
       id: Date.now(),
-      name: newTaskName
+      name: newTaskName,
+      completed: newTaskCompleted,
+      priority: newTaskPriority
     };
 
 
     setTasks([...tasks, newTask]);
-    setIsDialogOpen(false);
     setNewTaskName('');
+    setNewTaskPriority('');
+    setNewTaskCompleted(false);
+    setIsDialogOpen(false);
   }
 
   const handleDeleteTask = (id) => {
     const updatedTasks = tasks.filter((task) => task.id !== id);
+    setTasks(updatedTasks);
+  }
+
+  const handleCompletedTask = (id) => {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === id) {
+        return {
+          ...task,
+          completed: !task.completed
+        }
+      }
+      return task;
+    });
     setTasks(updatedTasks);
   }
 
@@ -56,18 +76,24 @@ function App() {
                   <table class="min-w-full divide-y divide-gray-700">
                     <thead class="bg-[#1e293b]">
                       <tr>
-                        <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-6">ID</th>
+                        <th scope="col" class="px-1 py-3.5 text-left text-sm font-semibold text-white">ID</th>
                         <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-white">Nombre de la tarea</th>
+                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-white">Prioridad</th>
+                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-white">Completado</th>
                         <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
                           <span class="sr-only">Eliminar</span>
                         </th>
                       </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-800 bg-[#0f172a]">
+                    <tbody class={`divide-y divide-gray-800 bg-[#0f172a]`}>
                       {tasks.map((task) => (
-                        <tr key={task.id}>
+                        <tr key={task.id} className={`${task.completed ? 'line-through text-white' : 'text-white'} `} onClick={() => handleCompletedTask(task.id)}>
                           <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-6">{task.id}</td>
                           <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-400">{task.name}</td>
+                          <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-400">{task.priority}</td>
+                          <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-400">
+                            <input type="checkbox" onClick={() => setNewTaskCompleted(true)} />
+                          </td>
                           <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                             <a href="#" class="text-indigo-400 hover:text-indigo-300" onClick={() => handleDeleteTask(task.id)}>Eliminar</a>
                           </td>
@@ -87,6 +113,11 @@ function App() {
           <div class="flex min-h-full items-center justify-center">
             <div class="bg-white p-6 rounded-md shadow-md">
               <input type="text" class="w-96 h-12 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500" placeholder="Nombre de la tarea" value={newTaskName} onChange={(e) => setNewTaskName(e.target.value)} />
+              <select class="w-96 h-12 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500" placeholder="Prioridad" value={newTaskPriority} onChange={(e) => setNewTaskPriority(e.target.value)}>
+                <option value="high">Alta</option>
+                <option value="medium">Media</option>
+                <option value="low">Baja</option>
+              </select>
               <div class="flex justify-end mt-4 mb-0 gap-2">
                 <button type="button" class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" onClick={() => {
                   handleAddTask();
